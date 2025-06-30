@@ -1,0 +1,127 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/follow-up-tests"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Patient Overview</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="dashboard-container">
+    <div class="patient-overview">
+      <img class="avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5853v0sJzenWuNQcfuLts1rJgrVjstV61vo_FqKk7RG04KJeOykb8dog7bwtvrklVfxfhuZUfVvo_NRFqSUMX3ri6xZWPgfCYVoS-YS6WgmlwKANaAsivdkb2Zxbtn1L0Ki_eCkvernCBCm0Xx3zzHJtS5JsjFTd48zd06-b8roe_xU1cpcR3AwwsbZpDuK4t5UGt-Gsi0lpi4HBQE54kch55FhkUiCs7K6lG29QLwPsxZhNAbhX5EDXiBgPEP8ymUGm2FTUqZJc" alt="Sophia Carter" />
+      <div class="patient-info">
+        <div class="patient-name">Sophia Carter</div>
+        <div class="patient-details">Female, 34</div>
+      </div>
+    </div>
+
+    <div class="section-title">Test Results</div>
+    <div class="test-results-table">
+      <div class="test-row header">
+        <div>Previous</div>
+        <div>Current</div>
+      </div>
+      <div class="test-row">
+        <div class="test-label">Trend</div>
+        <div class="test-value">12/03/2023</div>
+      </div>
+      <div class="test-row">
+        <div class="test-label">Up</div>
+        <div class="test-value">12/03/2023</div>
+      </div>
+      <div class="test-row">
+        <div class="test-label">03/03/2024</div>
+        <div class="test-value">Up</div>
+      </div>
+      <div class="test-row">
+        <div class="test-label">03/03/2024</div>
+        <div class="test-value">Up</div>
+      </div>
+      <div class="test-row glucose-row">
+        <div>
+          <div class="test-label-bold">Glucose</div>
+          <div class="test-label-sub">120 mg/dL</div>
+        </div>
+        <div class="test-value-bold">130 mg/dL</div>
+      </div>
+    </div>
+
+    <div class="trend-card">
+      <div class="trend-title">Glucose Trend</div>
+      <div class="trend-value">130 mg/dL</div>
+      <div class="trend-sub">Last 6 Months <span class="trend-up">+10%</span></div>
+      <div class="trend-graph">
+        <img src="assets/glucose-trend.svg" alt="Glucose Trend Graph" />
+      </div>
+    </div>
+
+    <div class="trend-card">
+      <div class="trend-title">Systolic Blood Pressure Trend</div>
+      <div class="trend-value">130 mmHg</div>
+      <div class="trend-sub">Last 6 Months <span class="trend-down">-7%</span></div>
+      <div class="trend-graph">
+        <img src="assets/bp-trend.svg" alt="BP Trend Graph" />
+      </div>
+      <div class="bp-row">
+        <div>
+          <div class="test-label-bold">Diastolic Blood Pressure</div>
+          <div class="test-label-sub">80 mmHg</div>
+        </div>
+        <div class="test-value-bold">75 mmHg</div>
+      </div>
+    </div>
+
+    <div class="section-title">Patient Timeline</div>
+    <div class="timeline">
+      <div class="timeline-row">
+        <i class="fa-solid fa-flask"></i>
+        <div>
+          <div class="timeline-label">Glucose Test</div>
+          <div class="timeline-date">03/03/2024</div>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <i class="fa-regular fa-heart"></i>
+        <div>
+          <div class="timeline-label">Blood Pressure Check</div>
+          <div class="timeline-date">03/03/2024</div>
+        </div>
+      </div>
+      <div class="timeline-row">
+        <i class="fa-regular fa-user"></i>
+        <div>
+          <div class="timeline-label">Initial Consultation</div>
+          <div class="timeline-date">12/03/2023</div>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="section-title">Clinical Insights</div>
+    <div class="insight-list">
+      <div>Abnormal glucose levels detected</div>
+      <div>Blood pressure within normal range</div>
+    </div>
+
+    <div class="section-title">Risk Flags</div>
+    <div class="insight-list">
+      <div>Elevated glucose levels</div>
+    </div>
+
+    <div class="section-title">Recommended Next Steps</div>
+    <div class="insight-list">
+      <div>Review patient's lifestyle and diet</div>
+      <div>Consider further tests for glucose levels</div>
+    </div>
+    <div class="timeline-actions">
+        <button class="chip">Download Report</button>
+        <button class="chip dark">Add Clinical Notes</button>
+        <button class="chip">Schedule Test</button>
+        <button class="chip dark">Request Test</button>
+      </div>
+  </div>
+
+
+</ion-content> 

@@ -1,0 +1,87 @@
+.feedback-card {
+  background: #fff;
+  border-radius: 18px;
+  // padding: 1.5rem 1.2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.feedback-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.2rem;
+}
+.feedback-rating {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #141414;
+}
+.feedback-reviews {
+  font-size: 1.1rem;
+  color: #888;
+  font-weight: 700;
+}
+.feedback-stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 0.7rem;
+  margin-top: 0.2rem;
+}
+.feedback-stars i {
+  font-size: 1.3rem;
+  color: #141414;
+}
+.feedback-stars i.fa-regular {
+  color: #dbdbdb;
+}
+.feedback-breakdown {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.feedback-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+.feedback-row-label {
+  width: 18px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #141414;
+}
+.feedback-row-bar {
+  flex: 1;
+  background: #dbdbdb;
+  border-radius: 999px;
+  height: 8px;
+  overflow: hidden;
+}
+.feedback-row-bar-inner {
+  height: 100%;
+  border-radius: 999px;
+}
+.feedback-row-percent {
+  width: 36px;
+  text-align: right;
+  font-size: 1rem;
+  color: #888;
+}
+
+
+.section-title {
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'Manrope', 'Noto Sans', sans-serif !important;
+  color: #141414;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1rem;
+}

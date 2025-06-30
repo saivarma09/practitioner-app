@@ -1,0 +1,44 @@
+.search-icon {
+  background: #ededed;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+ion-item {
+  margin-bottom: 1rem;
+  // margin-top: 1rem;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ion-list{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.section-title {
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'Manrope', 'Noto Sans', sans-serif !important;
+  color: #141414;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+i{
+  font-size: 1rem;
+}
+
+ion-label{
+    font-family: 'Poppins', 'Noto Sans', sans-serif !important;
+}
+

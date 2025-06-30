@@ -1,0 +1,31 @@
+ion-content {
+    padding: 1rem;
+  }
+  ion-list {
+    margin-top: 1rem;
+  }
+  ion-item {
+    --padding-start: 0;
+    --inner-padding-end: 0;
+    --border-style: none;
+  }
+  ion-label {
+    font-weight: 600;
+    min-width: 90px;
+  }
+  ion-text {
+    color: #242424;
+  } 
+  
+  .fa-xmark{
+    font-size: 1rem;
+  }
+
+.patient-info-grid ion-row {
+  margin-bottom: 12px;
+}
+
+.patient-info-grid ion-row:last-child {
+  margin-bottom: 0;
+}
+

@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Follow-Up Tests</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="dashboard-container">
+    <div class="search-bar-container">
+      <ion-searchbar placeholder="Search patients" class="no-padding"></ion-searchbar>
+    </div>
+    <div class="filter-chips">
+      <button class="chip">All <i class="fa-solid fa-chevron-down"></i></button>
+      <button class="chip selected">Urgent <i class="fa-solid fa-chevron-down"></i></button>
+      <button class="chip">Past Due <i class="fa-solid fa-chevron-down"></i></button>
+    </div>
+    <div class="followup-list">
+      <div class="followup-row" (click)="onPatientClick()">
+        <div class="followup-info">
+          <div class="patient-name">Ethan Harper</div>
+          <div class="test-type">MRI - Brain</div>
+        </div>
+        <div class="followup-status">Due in 3 days</div>
+      </div>
+      <div class="followup-row" (click)="onPatientClick()">
+        <div class="followup-info">
+          <div class="patient-name">Olivia Bennett</div>
+          <div class="test-type">Blood Test - Cholesterol</div>
+        </div>
+        <div class="followup-status urgent">Urgent</div>
+      </div>
+      <div class="followup-row" (click)="onPatientClick()">
+        <div class="followup-info">
+          <div class="patient-name">Noah Carter</div>
+          <div class="test-type">X-Ray - Chest</div>
+        </div>
+        <div class="followup-status past-due">Past Due</div>
+      </div>
+      <div class="followup-row" (click)="onPatientClick()">
+        <div class="followup-info">
+          <div class="patient-name">Ava Mitchell</div>
+          <div class="test-type">Ultrasound - Abdomen</div>
+        </div>
+        <div class="followup-status">Due in 7 days</div>
+      </div>
+      <div class="followup-row" (click)="onPatientClick()">
+        <div class="followup-info">
+          <div class="patient-name">Liam Foster</div>
+          <div class="test-type">ECG - Heart</div>
+        </div>
+        <div class="followup-status">Due in 10 days</div>
+      </div>
+    </div>
+  </div>
+</ion-content> 

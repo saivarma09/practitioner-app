@@ -1,0 +1,20 @@
+<div class="patient-info-container ion-padding position-relative">
+  <div class="avatar-border-wrapper">
+    <img 
+      (click)="onAvatarClick()" 
+      src="https://randomuser.me/api/portraits/women/44.jpg" 
+      alt="avatar" 
+      class="patient-avatar" 
+      style="cursor: pointer;"
+    />
+  </div>
+  <div>
+    <div class="patient-name">{{ patient.name }}</div>
+    <div class="patient-details">General Check-up &middot; 10:00 AM</div>
+  </div>
+  <div class="orange-circle position-absolute"></div>
+  <div>
+    <div class="circle-green"></div>
+  </div>
+</div>
+

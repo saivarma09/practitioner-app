@@ -1,0 +1,57 @@
+.revenue-card {
+  background: #fff;
+  border-radius: 18px;
+  // padding: 1.5rem 1.2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.revenue-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #141414;
+  margin-bottom: 0.5rem;
+}
+.revenue-value {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #141414;
+  margin-bottom: 0.2rem;
+}
+.revenue-subtitle {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 0.7rem;
+}
+.revenue-growth {
+  color: #078807;
+  font-weight: 700;
+}
+.revenue-chart {
+  width: 100%;
+  margin-bottom: 0.7rem;
+}
+.revenue-months {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.95rem;
+  color: #888;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+
+.section-title {
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'Manrope', 'Noto Sans', sans-serif !important;
+  color: #141414;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,25 @@
+.allergies-container {
+
+}
+.allergies-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+.edit-icon {
+  display: block;
+  margin-bottom: 0.7rem;
+  font-size: 1.2rem;
+}
+.allergy-chips {
+  display: flex;
+  gap: 0.7rem;
+}
+.allergy-chip {
+  background: #f3f3f3;
+  border-radius: 999px;
+  padding: 0.4rem 1.2rem;
+  font-weight: 500;
+  font-size: 1rem;
+} 

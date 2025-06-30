@@ -1,0 +1,23 @@
+<div class="section-title">Patient Feedback</div>
+<div class="feedback-card custom-card">
+  <div class="feedback-header-row">
+    <div class="feedback-rating">4.8</div>
+    <div class="feedback-reviews">150 reviews</div>
+  </div>
+  <div class="feedback-stars">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+  </div>
+  <div class="feedback-breakdown">
+    <div *ngFor="let row of feedbackRows" class="feedback-row">
+      <span class="feedback-row-label">{{ row.stars }}</span>
+      <div class="feedback-row-bar">
+        <div class="feedback-row-bar-inner" [style.width]="row.percent + '%'" [style.background]="'#141414'"></div>
+      </div>
+      <span class="feedback-row-percent">{{ row.percent }}%</span>
+    </div>
+  </div>
+</div>

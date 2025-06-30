@@ -1,0 +1,25 @@
+<div class="vitals-container ion-padding">
+  <div class="vitals-title ion-justify-content-between ion-align-self-center">
+    <div>Vitals</div>
+    <i class="fa-light fa-pen"></i>
+  </div>
+
+  <ion-row *ngFor="let row of [0, 1, 2]">
+    <ion-col size="6" *ngIf="vitals[row * 2]">
+      <div class="vital-block ion-padding-top">
+        <div class="vital-label">{{ vitals[row * 2].label }}</div>
+        <div class="vital-value" [ngClass]="vitals[row * 2].status">
+          {{ vitals[row * 2].value }} <span class="vital-unit">{{ vitals[row * 2].unit }}</span>
+        </div>
+      </div>
+    </ion-col>
+    <ion-col size="6" *ngIf="vitals[row * 2 + 1]">
+      <div class="vital-block ion-padding-top">
+        <div class="vital-label">{{ vitals[row * 2 + 1].label }}</div>
+        <div class="vital-value" [ngClass]="vitals[row * 2 + 1].status">
+          {{ vitals[row * 2 + 1].value }} <span class="vital-unit">{{ vitals[row * 2 + 1].unit }}</span>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+</div>

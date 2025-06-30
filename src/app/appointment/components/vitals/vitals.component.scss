@@ -1,0 +1,37 @@
+.vitals-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.edit-icon {
+  font-size: 1.1rem;
+}
+
+.vital-label {
+  font-size: 1rem;
+}
+.vital-value {
+  font-weight: 600;
+  font-size: 1rem;
+  &.normal {
+    color: #37c456;
+  }
+  &.high {
+    color: #ff9800;
+  }
+  &.low {
+    color: #e53935;
+  }
+  .vital-unit {
+    font-size: 0.9em;
+    color: #888;
+    margin-left: 2px;
+  }
+}
+.vital-status {
+  color: #888;
+  font-size: 1rem;
+} 

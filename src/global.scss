@@ -35,3 +35,178 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+@import 'odometer/themes/odometer-theme-default.css';
+
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/assets/fonts/Manrope/static/Manrope-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Manrope-Bold';
+  src: url('/assets/fonts/Manrope/static/Manrope-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url('/assets/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Manrope-Bold', 'Poppins-Bold', Arial, sans-serif !important;
+}
+
+
+ion-card, .custom-card {
+  border-radius: 18px !important;
+  box-shadow: none !important;
+  background: #fff !important;
+  padding: 0.5rem 1rem;
+}
+
+ion-list, .custom-list {
+  background: transparent !important;
+}
+
+ion-item {
+  --background: transparent !important;
+  --border-radius: 14px;
+  --padding-start: 0;
+  --padding-end: 0;
+  font-size: 1rem;
+}
+
+ion-button, .custom-btn {
+  border-radius: 999px !important;
+  font-weight: 600;
+  background: #ededed !important;
+  color: #141414 !important;
+  text-transform: none;
+  font-size: 1rem;
+  box-shadow: none !important;
+}
+
+ion-searchbar {
+  --background: #ededed !important;
+  --border-radius: 14px;
+  --color: #141414;
+  font-size: 1rem;
+}
+
+ion-progress-bar {
+  --background: #dbdbdb;
+  --progress-background: #141414;
+  border-radius: 999px;
+  height: 8px;
+}
+
+
+.pending-icon i {
+  font-size: 1.5rem;
+  color: #bdbdbd;
+}
+
+.header-background {
+  backdrop-filter: none !important;
+  background: #ffff;
+}
+
+ion-header ion-toolbar:first-of-type{
+  --border-width: 0px !important;
+}
+
+ion-header{
+    box-shadow: none !important;
+}
+
+
+.d-flex{
+  display: flex;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.gap-1{
+  gap: 1rem;
+}
+
+@supports(padding: max(0px)) {
+    .post {
+        padding-left: max(12px, env(safe-area-inset-left));
+        padding-right: max(12px, env(safe-area-inset-right));
+    }
+}
+
+
+.post {
+    padding: 12px;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+}
+
+ion-back-button::part(text){
+display: none;
+}
+
+ion-back-button{
+  color: #242424;
+}
+
+ion-header{
+  background: #fff;
+}
+ion-toolbar::part(background){
+  background: #fff;
+}
+
+
+.no-padding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.inner-item{
+  border: none !important;
+}
+
+.position-relative{
+  position: relative;
+}
+
+.position-absolute{
+  position: absolute;
+}
+
+ion-modal::part(content){
+  border-radius: 1rem;
+}
+
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}

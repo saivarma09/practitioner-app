@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="custom-header">
+    <div class="header-avatar" slot="start">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="avatar" />
+    </div>
+    <ion-title class="header-title">Dashboard</ion-title>
+    <div class="header-bell" slot="end">
+   <i class="fa-solid fa-bell"></i>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="ion-padding">
+    <app-schedule-list (selectedAppointment)="onSelectedAppointment($event)"></app-schedule-list>
+    <app-quick-stats></app-quick-stats>
+    <app-pending-actions></app-pending-actions>
+    <app-activity-feed></app-activity-feed>
+    <app-patient-search></app-patient-search>
+    <app-revenue-analytics></app-revenue-analytics>
+    <app-patient-feedback></app-patient-feedback>
+    <app-health-analytics></app-health-analytics>
+  </div>
+</ion-content>

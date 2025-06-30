@@ -1,0 +1,37 @@
+<ion-header>
+  <div class="header-container">
+    <div class="header-title">Patient Information</div>
+    <i class="fa-light fa-xmark-large cursor-pointer" (click)="close()"></i>
+  </div>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="patient">
+    <ion-grid class="patient-info-grid">
+      <ion-row>
+        <ion-col size="6"><strong>Name</strong></ion-col>
+        <ion-col size="6">{{ patient.name }}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6"><strong>Age</strong></ion-col>
+        <ion-col size="6">{{ patient.age }}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6"><strong>Phone</strong></ion-col>
+        <ion-col size="6">{{ patient.phone }}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6"><strong>Email</strong></ion-col>
+        <ion-col size="6">{{ patient.email }}</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6"><strong>Address</strong></ion-col>
+        <ion-col size="6">{{ patient.address }}</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  
+  <div *ngIf="!patient" class="ion-text-center ion-padding">
+    <p>No patient information available</p>
+  </div>
+</ion-content>

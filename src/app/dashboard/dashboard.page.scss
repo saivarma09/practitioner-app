@@ -1,0 +1,39 @@
+.custom-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ --background: #ffffff !important;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  box-shadow: none;
+  --opacity:1 !important;
+}
+.header-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ededed;
+  display: block;
+}
+.header-title {
+    flex: 1;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #141414;
+    letter-spacing: -0.01em;
+  }
+  .header-bell {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .header-bell ion-icon {
+    font-size: 1.7rem;
+    color: #141414;
+  }
+  
+  ion-header {
+    padding-top: env(safe-area-inset-top);
+  }

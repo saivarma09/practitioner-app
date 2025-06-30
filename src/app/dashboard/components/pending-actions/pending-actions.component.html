@@ -1,0 +1,15 @@
+<div class="section-title">Pending Actions</div>
+<ion-list class="custom-list">
+  <ion-item *ngFor="let action of actions" lines="none" (click)="onActionClick(action)">
+    <div class="d-flex gap-1 align-items-center">
+    <div class="pending-icon" slot="start">
+      <i [ngClass]="action.icon"></i>
+    </div>
+    <ion-label>
+      <div class="pending-title">{{ action.title }}</div>
+      <div class="pending-subtitle">{{ action.subtitle }}</div>
+    </ion-label>
+    </div>
+    <i class="fa-solid fa-chevron-right" slot="end"></i>
+  </ion-item>
+</ion-list>

@@ -1,0 +1,7 @@
+{
+  "name": "practitioner-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

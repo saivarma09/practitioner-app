@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
@@ -9,7 +9,8 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule],
 })
 export class PatientSearchComponent implements OnInit {
-
+@Output() addPatient = new EventEmitter<void>();
+@Output() navigateToPatient = new EventEmitter<void>();
   constructor() { }
 
   ngOnInit() {}

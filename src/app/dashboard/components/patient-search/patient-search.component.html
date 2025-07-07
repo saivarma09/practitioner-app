@@ -1,7 +1,7 @@
-<div class="section-title">Patient Search & Quick Access</div>
-<ion-searchbar class="no-padding" placeholder="Search for patients"></ion-searchbar>
+<div class="section-title">Patients</div>
+<!-- <ion-searchbar class="no-padding" placeholder="Search for patients"></ion-searchbar> -->
 <ion-list class="custom-list">
-  <ion-item  lines="none">
+  <ion-item  lines="none" (click)="navigateToPatient.emit()">
     <div class="d-flex gap-1 align-items-center">
     <div class="search-icon" slot="start">
       <i class="fa-regular fa-user"></i>
@@ -10,7 +10,7 @@
     </div>
  <i class="fa-solid fa-chevron-right" slot="end"></i>
   </ion-item>
-  <ion-item  lines="none">
+  <ion-item  lines="none" (click)="addPatient.emit()">
     <div class="d-flex gap-1 align-items-center">
     <div class="search-icon" slot="start">
      <i class="fa-solid fa-user-group"></i>

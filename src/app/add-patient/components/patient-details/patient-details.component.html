@@ -1,0 +1,83 @@
+<ion-content>
+<ion-grid class="ion-padding">
+  <ion-row>
+    <ion-col size="12" size-md="4" class="side-heading-col">
+      <div class="side-heading">Patient Details</div>
+    </ion-col>
+    <ion-col size="12" size-md="8">
+      <form [formGroup]="patientForm">
+        <ion-input 
+          label="Title" 
+          label-placement="floating" 
+          fill="outline" 
+          formControlName="title"
+          mode="md"
+          class="form-field-gap">
+        </ion-input>
+
+        <ion-input 
+          label="First Name" 
+          label-placement="floating" 
+          fill="outline" 
+          formControlName="firstName"
+          mode="md"
+          class="form-field-gap">
+        </ion-input>
+
+        <ion-input 
+          label="Last Name" 
+          label-placement="floating" 
+          fill="outline" 
+          formControlName="lastName"
+          mode="md"
+          class="form-field-gap">
+        </ion-input>
+
+        <ion-input 
+          label="Initials" 
+          label-placement="floating" 
+          fill="outline" 
+          formControlName="initials"
+          mode="md"
+          class="form-field-gap">
+        </ion-input>
+
+        <ion-input 
+          label="Date of Birth" 
+          label-placement="floating" 
+          fill="outline" 
+          formControlName="dob"
+          type="date"
+          mode="md"
+          class="form-field-gap">
+        </ion-input>
+
+        <ion-select 
+        interface="action-sheet"
+          label="Gender" 
+          label-placement="floating" 
+          fill="outline" 
+          formControlName="gender"
+          mode="md"
+          class="form-field-gap">
+          <ion-select-option *ngFor="let option of genderOptions" [value]="option.value">{{option.label}}</ion-select-option>
+        </ion-select>
+
+        <ion-select 
+        interface="action-sheet"
+          label="Languages Known" 
+          label-placement="floating" 
+          fill="outline" 
+          formControlName="language"
+          mode="md"
+          class="form-field-gap">
+          <ion-select-option *ngFor="let option of languageOptions" [value]="option.value">{{option.label}}</ion-select-option>
+        </ion-select>
+
+        <div style="margin-top: 0.5rem; text-align: end;">
+          <app-button buttonLabel="Next" buttonType="solid" (click)="navigateToAddressDetails()"></app-button>
+        </div>
+      </form>
+    </ion-col>
+  </ion-row>
+</ion-grid>   

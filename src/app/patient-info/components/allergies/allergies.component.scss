@@ -1,0 +1,105 @@
+.search-bar-wrapper {
+  padding: 16px 0 0;
+}
+
+.allergy-card {
+  background: #fff;
+  padding: 1rem;
+  border-top: 1px solid #ededed;
+  &:first-child{
+    border-top: none !important;
+  }
+}
+
+.allergy-main-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.allergy-severity {
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.severity-mild {
+  color: #34c759;
+}
+.severity-moderate {
+  color: #ff9500;
+}
+.severity-severe {
+  color: #ff3b30;
+}
+.severity-fatal {
+  color: #b71c1c;
+}
+.severity-life-threatening {
+  color: #8e24aa;
+}
+
+.divider {
+  width: 1px;
+  height: 18px;
+  background: #e0e0e0;
+  margin: 0 8px;
+  display: inline-block;
+}
+
+.type-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+  background: #bdbdbd;
+}
+.dot-food {
+  background: #ffb300;
+}
+.dot-drug {
+  background: #1976d2;
+}
+.dot-environmental {
+  background: #43a047;
+}
+.dot-other {
+  background: #757575;
+}
+
+.dot-divider {
+  color: #d3d3d3;
+  font-size: 1.1rem;
+  user-select: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.allergy-type, .allergy-allergen, .allergy-code {
+  color: #888;
+  font-size: 13px;
+}
+
+.allergy-notes {
+  font-size: 13px;
+  color: #888;
+}
+
+.allergy-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.edit-icon {
+  color: #242424;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.delete-icon {
+  color: #ff3b30;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+

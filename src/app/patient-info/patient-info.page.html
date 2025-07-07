@@ -1,0 +1,81 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <app-header pageTitle="Patient Info"></app-header>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding patient-info-content">
+  <!-- Patient Avatar and Name -->
+  <div class="patient-avatar-container">
+    <img class="patient-avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Patient Avatar" />
+    <div class="patient-name-row">
+      <span class="patient-name">Olivia Bennett</span>
+      <span class="patient-status"><i class="fa-light fa-circle-check status-confirmed"></i> <span>Active</span></span>
+    </div>
+  </div>
+
+  <ion-card class="patient-info-card no-padding">
+    <ion-list lines="none" class="patient-info-list">
+      <ion-item>
+        <i class="fa-light fa-cake-candles info-icon"></i>
+        <ion-label>Age</ion-label>
+        <ion-note slot="end">34 years, 2 months</ion-note>
+      </ion-item>
+      <ion-item>
+        <i class="fa-light fa-calendar-days info-icon"></i>
+        <ion-label>Date of Birth</ion-label>
+        <ion-note slot="end">12/03/1990</ion-note>
+      </ion-item>
+      <ion-item (click)="copyMRN('1234567890')" class="mrn-item">
+        <i class="fa-light fa-id-card info-icon"></i>
+        <ion-label>MRN</ion-label>
+        <ion-note slot="end" class="mrn-note">1234567890 <i class="fa-regular fa-copy copy-mrn-icon"></i></ion-note>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card class="patient-info-card no-padding">
+    <ion-card-header class="no-padding">
+      <ion-card-title>Appointment Summary</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="no-padding">
+      <ion-label class="sub-heading">
+         Consultation With Minor Treatment 
+        <ion-text color="success"> Confirmed</ion-text>
+      </ion-label>
+      <ion-list lines="none" class="no-padding">
+        <ion-item>
+          <i class="fa-light fa-user-doctor info-icon"></i>
+          <ion-label>Clinician</ion-label>
+          <ion-note slot="end">Dr. Smith (12345)</ion-note>
+        </ion-item>
+        <ion-item>
+          <i class="fa-light fa-calendar-check info-icon"></i>
+          <ion-label>Date</ion-label>
+          <ion-note slot="end">12/03/2024</ion-note>
+        </ion-item>
+        <ion-item>
+          <i class="fa-light fa-clock info-icon"></i>
+          <ion-label>Time</ion-label>
+          <ion-note slot="end">10:00 AM (30 mins)</ion-note>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-segment class="custom-segment" [value]="selectedTab" (ionChange)="onTabChange($event.detail.value)" scrollable>
+    <ion-segment-button *ngFor="let tab of tabs" [value]="tab">
+      <ion-label>{{ tab }}</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div class="tab-content-anim">
+    <ng-container *ngComponentOutlet="tabComponentMap[selectedTab]"></ng-container>
+  </div>
+
+  <!-- Floating Action Button -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button class="fab-main" (click)="onFabClick()">
+      <i class="fa-light fa-plus"></i>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

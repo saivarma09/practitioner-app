@@ -1,0 +1,52 @@
+<div class="contact-details-content">
+  <!-- Address Section -->
+  <div class="section-title">Addresses</div>
+  <ion-list class="address-list">
+    <div *ngFor="let address of addresses" class="d-flex align-items-center justify-content-between w-100 address-card">
+      <ion-label class="d-flex flex-column gap-0-5">
+        <div class="address-main-info">
+          <span class="address-type">{{address.type}}</span>
+          <span class="dot-divider">•</span>
+          <span class="address-usage">{{address.usage}}</span>
+        </div>
+        <div class="address-details">
+          <span class="address-prefix">{{address.prefix}}</span>
+          <span class="address-line">{{address.addressLine1}}</span>
+          <span class="address-line" *ngIf="address.addressLine2">{{address.addressLine2}}</span>
+          <span class="address-line" *ngIf="address.addressLine3">{{address.addressLine3}}</span>
+          <span class="address-city">{{address.city}}</span>
+          <span class="address-postal">{{address.postalCode}}</span>
+        </div>
+      </ion-label>
+      <ion-note slot="end" class="address-actions">
+        <i class="fa-light fa-pen-to-square edit-icon" (click)="editAddress(address)"></i>
+        <i class="fa-light fa-trash delete-icon" (click)="deleteAddress(address)"></i>
+      </ion-note>
+    </div>
+    <div class="add-action" (click)="addAddress()">
+      <i class="fa-light fa-circle-plus add-icon"></i> Add Address
+    </div>
+  </ion-list>
+
+  <!-- Telecom Section -->
+  <div class="section-title">Telecoms</div>
+  <ion-list class="telecom-list">
+    <div *ngFor="let telecom of telecoms" class="d-flex align-items-center justify-content-between w-100 telecom-card">
+      <ion-label class="d-flex flex-column gap-0-5">
+        <div class="telecom-main-info">
+          <span class="telecom-type">{{telecom.type}}</span>
+          <span class="dot-divider">•</span>
+          <span class="telecom-option">{{telecom.option}}</span>
+        </div>
+        <div class="telecom-number">{{telecom.number}}</div>
+      </ion-label>
+      <ion-note slot="end" class="telecom-actions">
+        <i class="fa-light fa-pen-to-square edit-icon" (click)="editTelecom(telecom)"></i>
+        <i class="fa-light fa-trash delete-icon" (click)="deleteTelecom(telecom)"></i>
+      </ion-note>
+    </div>
+    <div class="add-action" (click)="addTelecom()">
+      <i class="fa-light fa-circle-plus add-icon"></i> Add Telecom
+    </div>
+  </ion-list>
+</div>

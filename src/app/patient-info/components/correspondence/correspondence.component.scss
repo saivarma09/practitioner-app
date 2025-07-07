@@ -1,0 +1,117 @@
+.correspondence-list-content {
+//   background: #fafbfc;
+  padding: 16px 0 16px 0;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 24px 16px 8px 16px;
+  color: #242424;
+}
+
+
+.correspondence-card {
+  background: #fff;
+  padding: 1rem;
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  align-items: center;
+  transition: background 0.15s;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  &:last-child {
+    border-bottom: none !important;
+  }
+  &:active {
+    background: #f5f5f5;
+  }
+}
+
+.correspondence-main-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.correspondence-type {
+  font-weight: 400;
+  color: #242424;
+  text-transform: capitalize;
+}
+.correspondence-status {
+  font-size: 13px;
+  text-transform: capitalize;
+}
+.status-sent {
+  color: #34c759;
+}
+.status-received {
+  color: #1976d2;
+}
+.status-draft {
+  color: #ffb300;
+}
+.status-failed {
+  color: #ff3b30;
+}
+
+.divider {
+  width: 1px;
+  height: 18px;
+  background: #e0e0e0;
+  margin: 0 8px;
+  display: inline-block;
+}
+
+.correspondence-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+  color: #888;
+}
+.correspondence-date, .correspondence-from, .correspondence-recipient {
+  color: #888;
+}
+
+.correspondence-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.edit-icon {
+  color: #242424;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.delete-icon {
+  color: #ff3b30;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.dot-divider {
+  color: #d3d3d3;
+  margin: 0 6px;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+// Status icon color matching status text
+.correspondence-details .fa-circle-check {
+  color: #34c759;
+}
+.correspondence-details .fa-circle-down {
+  color: #1976d2;
+}
+.correspondence-details .fa-circle-dot {
+  color: #ffb300;
+}
+.correspondence-details .fa-circle-xmark {
+  color: #ff3b30;
+}

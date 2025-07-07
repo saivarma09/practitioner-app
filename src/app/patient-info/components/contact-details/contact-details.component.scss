@@ -1,0 +1,125 @@
+.contact-details-content {
+  padding: 0 0 24px 0;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 28px 16px 10px 16px;
+  color: #242424;
+  letter-spacing: 0.01em;
+}
+
+.address-list, .telecom-list {
+  padding: 0 8px 0 8px;
+}
+
+.address-card, .telecom-card {
+  background: #fff;
+  padding: 1.1rem 1rem 1rem 1rem;
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.18s, background 0.15s;
+  cursor: pointer;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+.address-card:last-child, .telecom-card:last-child {
+  border: none !important;
+}
+.address-card:active, .telecom-card:active {
+  background: #f5f5f5;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.address-main-info, .telecom-main-info {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.address-type, .telecom-type {
+  font-weight: 400;
+  color: #242424;
+  text-transform: capitalize;
+}
+.address-usage, .telecom-option {
+  font-size: 13px;
+  color: #888;
+  text-transform: capitalize;
+}
+
+.dot-divider {
+  color: #d3d3d3;
+  margin: 0 6px;
+  font-size: 1.1rem;
+  user-select: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.address-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+  color: #888;
+  margin-top: 2px;
+}
+.address-prefix {
+  color: #242424;
+  font-weight: 400;
+}
+.address-line, .address-city, .address-postal {
+  color: #888;
+}
+
+.telecom-number {
+  font-size: 13px;
+  color: #242424;
+  margin-top: 2px;
+}
+
+.address-actions, .telecom-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.edit-icon {
+  color: #242424;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.delete-icon {
+  color: #ff3b30;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.add-action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1976d2;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 10px 0 0 0;
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 0.4rem 1.2rem;
+  background: #f3f7fd;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: 0 1px 4px rgba(25, 118, 210, 0.04);
+}
+.add-action:hover {
+  background: #e3edfa;
+  color: #0d47a1;
+}
+.add-icon {
+  font-size: 1.1rem;
+}
+.divider { display: none !important; }

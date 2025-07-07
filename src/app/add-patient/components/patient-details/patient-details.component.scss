@@ -1,0 +1,32 @@
+ion-input, ion-select, ion-item {
+  font-size: 1rem;
+}
+
+ion-list {
+  margin-top: 1rem;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.side-heading-col {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.side-heading {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #242424;
+  text-align: center;
+}
+
+.form-field-gap {
+  margin-bottom: 1rem;
+  display: block;
+}

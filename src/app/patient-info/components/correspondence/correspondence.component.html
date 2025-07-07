@@ -1,0 +1,41 @@
+<div class="correspondence-list-content">
+  <ion-list class="correspondence-list">
+    <div *ngFor="let item of correspondences" class="d-flex align-items-center justify-content-between w-100 correspondence-card">
+      <ion-label class="d-flex flex-column gap-0-5">
+        <div class="correspondence-main-info">
+          <i class="fa-light info-icon" [ngClass]="{
+            'fa-envelope': item.communicationType === 'Email',
+            'fa-file-lines': item.communicationType === 'Letter',
+            'fa-phone': item.communicationType === 'Phone',
+            'fa-message': item.communicationType === 'SMS'
+          }"></i>
+          <span class="correspondence-type">{{item.communicationType}}</span>
+        </div>
+        <div class="correspondence-details">
+          <!-- <i class="fa-light fa-user info-icon"></i> -->
+          <span class="correspondence-from">From: {{item.from}}</span>
+        </div>
+        <div class="correspondence-details">
+          <!-- <i class="fa-light fa-user-check info-icon"></i> -->
+          <span class="correspondence-recipient">To: {{item.recipient}}</span>
+        </div>
+        <div class="correspondence-details d-flex align-items-center gap-0-5">
+          <span class="correspondence-date">Date: {{item.date}}</span>
+          <span class="dot-divider">•</span>
+          <i class="fa-light info-icon" [ngClass]="{
+            'fa-circle-check': item.status === 'Sent',
+            'fa-circle-down': item.status === 'Received',
+            'fa-circle-dot': item.status === 'Draft',
+            'fa-circle-xmark': item.status === 'Failed'
+          }"></i>
+          <span class="correspondence-status status-{{item.status.toLowerCase()}}">{{item.status}}</span>
+        </div>
+      </ion-label>
+      <ion-note slot="end" class="correspondence-actions">
+        <!-- <i class="fa-light fa-pen-to-square edit-icon" (click)="editCorrespondence(item)"></i>
+        <i class="fa-light fa-trash delete-icon" (click)="deleteCorrespondence(item)"></i> -->
+        <i class="fa-light fa-chevron-right"></i>
+      </ion-note>
+    </div>
+  </ion-list>
+</div>

@@ -1,0 +1,43 @@
+<div class="appointment-list-content">
+  <div class="search-bar-wrapper">
+    <ion-searchbar [(ngModel)]="searchTerm" placeholder="Search appointments"></ion-searchbar>
+  </div>
+  <ion-list class="appointment-list">
+    <div *ngFor="let appointment of filteredAppointments"
+         class="d-flex align-items-center justify-content-between w-100 appointment-card"
+         (click)="onAppointmentClick(appointment)">
+      <ion-label class="d-flex flex-column gap-0-5">
+        <div class="appointment-name d-flex align-items-center gap-0-5">
+          <i class="fa-light fa-user info-icon"></i>
+          <span>{{appointment.name}}</span>
+        </div>
+        <div class="appointment-details d-flex align-items-center gap-0-5">
+          <!-- <i class="fa-light fa-location-dot info-icon"></i> -->
+          <span>{{appointment.location}}</span>
+         
+        </div>
+        <div class="appointment-details d-flex align-items-center gap-0-5">
+      
+          <!-- <i class="fa-light fa-notes-medical info-icon"></i> -->
+          <span>{{appointment.type}}</span>
+        </div>
+        <div class="appointment-date-status d-flex align-items-center gap-0-5">
+          <!-- <i class="fa-light fa-calendar-days info-icon"></i> -->
+          <span class="date">{{appointment.dateTime}}</span>
+          <span class="dot-divider">•</span>
+          <span class="status status-{{appointment.status.toLowerCase()}} d-flex align-items-center">
+            <i class="fa-light" [ngClass]="{
+              'fa-circle-check': appointment.status === 'Confirmed',
+              'fa-circle-xmark': appointment.status === 'Cancelled',
+              'info-icon': true
+            }"></i>
+            <span>{{appointment.status}}</span>
+          </span>
+        </div>
+      </ion-label>
+      <ion-note slot="end">
+        <i class="fa-light fa-chevron-right info-icon"></i>
+      </ion-note>
+    </div>
+  </ion-list>
+</div>

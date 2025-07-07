@@ -1,0 +1,99 @@
+<ion-content class="review-container ion-padding">
+  <div class="review-title">Review Details</div>
+  
+  <ion-accordion-group>
+    <!-- Patient Details Accordion -->
+    <ion-accordion value="patient">
+      <ion-item slot="header" color="light">
+        <ion-label>
+          <h2>Patient Details</h2>
+        </ion-label>
+      </ion-item>
+      
+      <div class="ion-padding" slot="content">
+        <div class="details-list">
+          <div class="detail-row" *ngIf="patientDetails">
+            <ion-row class="detail-item">
+              <ion-col size="5" class="label">Title:</ion-col>
+              <ion-col size="7" class="value">{{ patientDetails.title }}</ion-col>
+            </ion-row>
+            <ion-row class="detail-item">
+              <ion-col size="5" class="label">First Name:</ion-col>
+              <ion-col size="7" class="value">{{ patientDetails.firstName }}</ion-col>
+            </ion-row>
+            <ion-row class="detail-item">
+              <ion-col size="5" class="label">Last Name:</ion-col>
+              <ion-col size="7" class="value">{{ patientDetails.lastName }}</ion-col>
+            </ion-row>
+            <ion-row class="detail-item">
+              <ion-col size="5" class="label">Initials:</ion-col>
+              <ion-col size="7" class="value">{{ patientDetails.initials }}</ion-col>
+            </ion-row>
+            <ion-row class="detail-item">
+              <ion-col size="5" class="label">Date of Birth:</ion-col>
+              <ion-col size="7" class="value">{{ patientDetails.dob }}</ion-col>
+            </ion-row>
+            <ion-row class="detail-item">
+              <ion-col size="5" class="label">Gender:</ion-col>
+              <ion-col size="7" class="value">{{ patientDetails.gender }}</ion-col>
+            </ion-row>
+            <ion-row class="detail-item">
+              <ion-col size="5" class="label">Language:</ion-col>
+              <ion-col size="7" class="value">{{ patientDetails.language }}</ion-col>
+            </ion-row>
+          </div>
+          <div *ngIf="!patientDetails">No patient details available.</div>
+        </div>
+      </div>
+    </ion-accordion>
+
+    <!-- Address Details Accordion -->
+    <ion-accordion value="address">
+      <ion-item slot="header" color="light">
+        <ion-label>
+          <h2>Address Details</h2>
+        </ion-label>
+      </ion-item>
+      
+      <div class="ion-padding" slot="content">
+        <div class="details-list">
+          <div class="detail-row" *ngIf="addressDetails">
+            <ion-row class="detail-item">
+              <ion-col size="5" class="label">Type:</ion-col>
+              <ion-col size="7" class="value">{{ addressDetails.type }}</ion-col>
+            </ion-row>
+            <ion-row class="detail-item">
+              <ion-col size="5" class="label">Postal Code:</ion-col>
+              <ion-col size="7" class="value">{{ addressDetails.postalCode }}</ion-col>
+            </ion-row>
+            <ion-row class="detail-item">
+              <ion-col size="5" class="label">Prefix:</ion-col>
+              <ion-col size="7" class="value">{{ addressDetails.prefix }}</ion-col>
+            </ion-row>
+            <ion-row class="detail-item">
+              <ion-col size="5" class="label">Initials:</ion-col>
+              <ion-col size="7" class="value">{{ addressDetails.initials }}</ion-col>
+            </ion-row>
+            <ion-row class="detail-item">
+              <ion-col size="5" class="label">Address Line 1:</ion-col>
+              <ion-col size="7" class="value">{{ addressDetails.addressLine1 }}</ion-col>
+            </ion-row>
+            <ion-row class="detail-item">
+              <ion-col size="5" class="label">Address Line 2:</ion-col>
+              <ion-col size="7" class="value">{{ addressDetails.addressLine2 }}</ion-col>
+            </ion-row>
+            <ion-row class="detail-item">
+              <ion-col size="5" class="label">Address Line 3:</ion-col>
+              <ion-col size="7" class="value">{{ addressDetails.addressLine3 }}</ion-col>
+            </ion-row>
+            <ion-row class="detail-item">
+              <ion-col size="5" class="label">Address Line 4:</ion-col>
+              <ion-col size="7" class="value">{{ addressDetails.addressLine4 }}</ion-col>
+            </ion-row>
+          </div>
+          <div *ngIf="!addressDetails">No address details available.</div>
+        </div>
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>

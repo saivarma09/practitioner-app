@@ -12,11 +12,11 @@
 
 <ion-content [fullscreen]="true">
   <div class="ion-padding">
-    <app-schedule-list (selectedAppointment)="onSelectedAppointment($event)"></app-schedule-list>
+    <app-schedule-list (selectedAppointment)="onSelectedAppointment()"></app-schedule-list>
     <app-quick-stats></app-quick-stats>
-    <app-pending-actions></app-pending-actions>
-    <app-activity-feed></app-activity-feed>
-    <app-patient-search></app-patient-search>
+    <!-- <app-pending-actions></app-pending-actions> -->
+    <!-- <app-activity-feed></app-activity-feed> -->
+    <app-patient-search (addPatient)="onAddPatient()" (navigateToPatient)="onNavigateToPatient()"></app-patient-search>
     <app-revenue-analytics></app-revenue-analytics>
     <app-patient-feedback></app-patient-feedback>
     <app-health-analytics></app-health-analytics>

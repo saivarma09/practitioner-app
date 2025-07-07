@@ -1,0 +1,188 @@
+.insurer-list-content {
+  padding: 16px 0 16px 0;
+}
+
+
+
+.insurer-card {
+  background: #fff;
+  padding: 1rem;
+  border-bottom: 1px solid #ededed;
+  display: flex;
+  align-items: center;
+  transition: background 0.15s;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  &:last-child {
+    border-bottom: none !important;
+  }
+  &:active {
+    background: #f5f5f5;
+  }
+}
+
+.insurer-main-info {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.insurer-name {
+  font-weight: 400;
+  color: #242424;
+  text-transform: capitalize;
+}
+.insurer-status {
+  font-size: 13px;
+  color: #1976d2;
+  text-transform: capitalize;
+}
+.status-primary {
+  color: #1976d2;
+}
+.status-secondary {
+  color: #888;
+}
+
+.divider {
+  width: 1px;
+  height: 18px;
+  background: #e0e0e0;
+  margin: 0 8px;
+  display: inline-block;
+}
+
+.insurer-details {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 2px;
+}
+.insurer-membership, .insurer-scheme, .insurer-expiry {
+  color: #888;
+}
+.insurer-expiry.expired {
+  color: #ff3b30;
+  font-weight: 400;
+}
+.expired-label {
+  color: #ff3b30;
+  font-size: 12px;
+  margin-left: 6px;
+  font-weight: 400;
+}
+
+.verified-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.insurer-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+.edit-icon {
+  color: #242424;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.unlink-icon {
+  color: #ff9800;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+.verify-btn {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 400;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  align-self: flex-end;
+  margin-top: 6px;
+}
+.verify-btn:hover {
+  background: #0d47a1;
+}
+
+.dot-divider {
+  color: #d3d3d3;
+  margin: 0 6px;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+.info-icon {
+  margin-right: 8px;
+  font-size: 1.1rem;
+  color: #6b7a89;
+  min-width: 18px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+// Status icon color
+.insurer-main-info .fa-circle-check {
+  color: #1976d2;
+}
+.insurer-main-info .fa-circle-dot {
+  color: #888;
+}
+.verified-badge .verified-icon {
+  color: #34c759;
+  margin-right: 2px;
+}
+.verified-label {
+  color: #34c759;
+  font-size: 13px;
+  font-weight: 400;
+}
+.insurer-details .fa-calendar-xmark.expired-icon {
+  color: #ff3b30;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.verified-badge-topright {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  z-index: 2;
+  background: #fff;
+  border-radius: 50%;
+  padding: 2px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.verified-badge-topright .verified-icon {
+  color: #34c759;
+  font-size: 1.1rem;
+  margin: 0;
+}

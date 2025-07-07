@@ -1,0 +1,27 @@
+<div class="allergy-list-content">
+  <div class="search-bar-wrapper">
+    <ion-searchbar [(ngModel)]="searchTerm" placeholder="Search allergies"></ion-searchbar>
+  </div>
+  <ion-list class="allergy-list">
+    <div *ngFor="let allergy of filteredAllergies"
+         class="d-flex align-items-center justify-content-between w-100 allergy-card">
+      <ion-label class="d-flex flex-column gap-0-5">
+        <div class="d-flex align-items-center">
+          <span class="type-dot" [ngClass]="getTypeDotClass(allergy.type)"></span>
+          <span class="allergy-severity" >{{allergy.severity}}</span>
+        </div>
+        <div class="allergy-main-info">
+          <span class="allergy-type">{{allergy.type}}</span>
+          <span class="dot-divider">•</span>
+          <span class="allergy-allergen">{{allergy.allergen}}</span>
+          <span class="allergy-code">({{allergy.allergenCode}})</span>
+        </div>
+        <div class="allergy-notes">{{allergy.notes}}</div>
+      </ion-label>
+      <ion-note slot="end" class="allergy-actions">
+        <i class="fa-light fa-pen-to-square edit-icon" (click)="onEdit(allergy)"></i>
+        <i class="fa-light fa-trash delete-icon" (click)="onDelete(allergy)"></i>
+      </ion-note>
+    </div>
+  </ion-list>
+</div>

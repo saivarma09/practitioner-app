@@ -1,5 +1,5 @@
 .section-title {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 1rem;
   font-family: 'Manrope', 'Noto Sans', sans-serif !important;
   color: #141414;
@@ -70,7 +70,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1rem 0.75em 0px;
   gap: 0.75rem;
 }
 
@@ -101,7 +101,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .schedule-time {

@@ -1,13 +1,27 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>patient</ion-title>
+    <app-header pageTitle="Patients"></app-header>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">patient</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="patient-list-content">
+  <div class="search-bar-wrapper">
+    <ion-searchbar class="no-padding" [(ngModel)]="searchTerm" placeholder="Search patients"></ion-searchbar>
+  </div>
+  <ion-list class="patient-list">
+    <ion-card *ngFor="let patient of filteredPatients" class="patient-card no-padding" (click)="onPatientClick(patient)">
+      <ion-card-content class="d-flex align-items-center justify-content-between">
+        <div class="patient-info">
+          <div class="patient-name">{{patient.name}}</div>
+          <div class="patient-details">DOB: {{patient.dob}} | {{patient.gender}}</div>
+          <div class="patient-status-date">
+            <span class="status-badge status-{{patient.status.toLowerCase()}}">
+              {{patient.status}}
+            </span>
+            <span class="date">| {{patient.date}}</span>
+          </div>
+        </div>
+        <i class="fa-light fa-chevron-right chevron-icon"></i>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
 </ion-content>

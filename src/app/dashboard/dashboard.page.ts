@@ -26,9 +26,14 @@ export class DashboardPage implements OnInit {
   ngOnInit() {
   }
 
-  onSelectedAppointment(appointmentInfo:any){
+  onSelectedAppointment(){
     this.router.navigate(['/appointment']);
-    
+  }
+  onAddPatient(){
+    this.router.navigate(['/add-patient']);
+  }
+  onNavigateToPatient(){
+    this.router.navigate(['/patient']);
   }
 
 }

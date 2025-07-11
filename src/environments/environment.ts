@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  serverUrl: 'https://epractice.ext.healthcode.co.uk/api',
+  healthcodeSSO_host: "https://auth.healthcode.co.uk",
+  healthcodeSSO_redirectUri: "https://epractice.ext.healthcode.co.uk/",
+  healthcodeAccounts_host: "https://accounts.healthcode.co.uk",
+  pracAppClientId: "practapp"
 };
 
 /*

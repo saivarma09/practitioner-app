@@ -6,6 +6,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start-dev": "ng serve --configuration=local-dev",
+    "start-uat": "ng serve --configuration=local-uat",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",

@@ -7,23 +7,23 @@
          class="d-flex align-items-center justify-content-between w-100 appointment-card"
          (click)="onAppointmentClick(appointment)">
       <ion-label class="d-flex flex-column gap-0-5">
-        <div class="appointment-name d-flex align-items-center gap-0-5">
-          <i class="fa-light fa-user info-icon"></i>
-          <span>{{appointment.name}}</span>
+        <div class="appointment-name d-flex align-items-center gap-0-5 ">
+          <i class="fa-light fa-user info-icon fs-16 tertiary-color"></i>
+          <span class="font-manrope fs-16 fw-600 primary-color">{{appointment.name}}</span>
         </div>
         <div class="appointment-details d-flex align-items-center gap-0-5">
           <!-- <i class="fa-light fa-location-dot info-icon"></i> -->
-          <span>{{appointment.location}}</span>
+          <span class="font-manrope fs-14 fw-500 tertiary-color">{{appointment.location}}</span>
          
         </div>
         <div class="appointment-details d-flex align-items-center gap-0-5">
       
           <!-- <i class="fa-light fa-notes-medical info-icon"></i> -->
-          <span>{{appointment.type}}</span>
+          <span class="font-manrope fs-14 fw-500 tertiary-color">{{appointment.type}}</span>
         </div>
-        <div class="appointment-date-status d-flex align-items-center gap-0-5">
+        <div class="appointment-date-status d-flex align-items-center gap-0-5 font-manrope fs-14 fw-500 tertiary-color">
           <!-- <i class="fa-light fa-calendar-days info-icon"></i> -->
-          <span class="date">{{appointment.dateTime}}</span>
+          <span class="date font-manrope fs-14 fw-500 tertiary-color">{{appointment.dateTime}}</span>
           <span class="dot-divider">•</span>
           <span class="status status-{{appointment.status.toLowerCase()}} d-flex align-items-center">
             <i class="fa-light" [ngClass]="{

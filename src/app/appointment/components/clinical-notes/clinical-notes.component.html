@@ -1,17 +1,17 @@
 <div class="clinical-notes-container ion-padding">
-  <div class="clinical-notes-title ">Clinical Notes</div>
+  <div class="clinical-notes-title font-poppins fs-16 fw-600 primary-color">Clinical Notes</div>
   <ion-grid class="clinical-note-list">
     <ion-row class="stepper-row" *ngFor="let note of notes; let i = index">
       <ion-col size="1" class="stepper-col">
         <div class="stepper-icon-container">
-          <i class="fa-light fa-notes stepper-icon"></i>
+          <i class="fa-light fa-notes stepper-icon fs-20 primary-color"></i>
           <div *ngIf="i < notes.length - 1" class="stepper-line"></div>
         </div>
       </ion-col>
       <ion-col size="10">
         <div>
-          <div class="note-title">{{ note.title }}</div>
-          <div class="note-date">{{ note.date }}</div>
+          <div class="note-title font-manrope fs-16 fw-500 tertiary-color">{{ note.title }}</div>
+          <div class="note-date font-manrope fs-16 fw-500 primary-color">{{ note.date }}</div>
         </div>
       </ion-col>
     </ion-row>

@@ -2,21 +2,11 @@
   padding: 16px 0 0;
 }
 
-.info-icon {
-  margin-right: 8px;
-  font-size: 1.1rem;
-  color: #6b7a89;
-  min-width: 18px;
-  text-align: center;
-  vertical-align: middle;
-  display: inline-block;
-}
 
 .dot-divider {
-  color: #d3d3d3;
   margin: 0 6px;
-  font-size: 1.1rem;
   user-select: none;
+  color: var(--ion-color-tertiary) !important;
 }
 
 .appointment-card {
@@ -35,8 +25,6 @@
 }
 
 .appointment-date-status {
-  font-size: 13px;
-  color: #888;
   margin-bottom: 2px;
   display: flex;
   gap: 8px;
@@ -44,35 +32,21 @@
 }
 
 .status {
-  font-weight: 400;
   text-transform: capitalize;
   gap: 0.3rem;
   display: flex;
   align-items: center;
 }
-.status-confirmed {
-  color: #34c759;
+
+.status-confirmed{
+  color: var(--ion-color-success) !important;
 }
-.status-cancelled {
-  color: #ff3b30;
-}
-.status .fa-circle-check {
-  color: #34c759;
-}
-.status .fa-circle-xmark {
-  color: #ff3b30;
+.status-cancelled{
+  color: var(--ion-color-danger) !important;
 }
 
-.appointment-name {
-  font-size: 1rem;
-  margin-bottom: 2px;
-  font-weight: 400;
-  color: #242424;
-}
 
 .appointment-details {
-  font-size: 13px;
-  color: #888;
   gap: 0.3rem;
   display: flex;
   align-items: center;

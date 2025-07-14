@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
@@ -8,10 +8,10 @@ import { IonicModule } from '@ionic/angular';
   standalone: true,
   imports: [IonicModule],
 })
-export class HealthAnalyticsComponent implements OnInit {
+export class HealthAnalyticsComponent {
 
   constructor() { }
 
-  ngOnInit() {}
+
 
 }

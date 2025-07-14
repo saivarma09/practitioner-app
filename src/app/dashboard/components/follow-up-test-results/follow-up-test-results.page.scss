@@ -3,18 +3,12 @@
 }
 
 .header-title {
-  font-size: 1.5rem;
-  font-weight: 400;
   text-align: center;
   width: 100%;
-  font-family: 'Manrope', 'Noto Sans', sans-serif !important;
 }
 
 .section-title {
-  font-size: 1.5rem;
-  font-weight: 400;
   margin: 2rem 0 1rem 0.5rem;
-  color: #141414;
 }
 
 .patient-overview {
@@ -34,15 +28,7 @@
   display: flex;
   flex-direction: column;
 }
-.patient-name {
-  font-size: 1rem;
-  // font-weight: 400;
-  color: #141414;
-}
-.patient-details {
-  font-size: 1rem;
-  color: #888;
-}
+
 
 .test-results-table {
   width: 100%;
@@ -56,29 +42,12 @@
   border-bottom: 1px solid #f0f0f0;
 }
 .test-row.header {
-  font-weight: 400;
-  color: #888;
   border-bottom: 2px solid #e0e0e0;
   padding-bottom: 0.3rem;
 }
 .test-label, .test-value {
-  font-size: 1rem;
-  color: #141414;
 }
-.test-label-bold {
-  font-weight: 400;
-  font-size: 1rem;
-  color: #141414;
-}
-.test-label-sub {
-  font-size: 1rem;
-  color: #888;
-}
-.test-value-bold {
-  font-weight: 400;
-  font-size: 1rem;
-  color: #141414;
-}
+
 .glucose-row {
   border-bottom: none;
   margin-top: 1rem;
@@ -92,28 +61,15 @@
   margin-bottom: 1.5rem;
 }
 .trend-title {
-  font-size: 1rem;
-  // font-weight: 400;
   margin-bottom: 0.2rem;
 }
 .trend-value {
-  font-size: 1rem;
-  // font-weight: 900;
   margin-bottom: 0.2rem;
 }
 .trend-sub {
-  font-size: 0.9rem;
-  color: #888;
   margin-bottom: 0.7rem;
 }
-.trend-up {
-  color: #1db954;
-  font-weight: 400;
-}
-.trend-down {
-  color: #d32f2f;
-  font-weight: 400;
-}
+
 .trend-graph {
   width: 100%;
   height: 80px;
@@ -141,17 +97,8 @@
   position: relative;
 }
 .timeline-row i {
-  font-size: 1.3rem;
-  color: #888;
 }
-.timeline-label {
-  font-size: 1rem;
-  color: #141414;
-}
-.timeline-date {
-  font-size: 1rem;
-  color: #888;
-}
+
 .timeline-actions {
   display: flex;
   flex-wrap: wrap;
@@ -163,9 +110,6 @@
   border: none;
   border-radius: 999px;
   padding: 0.7rem 1.5rem;
-  font-size: 1rem;
-  // font-weight: 400;
-  color: #141414;
   box-shadow: none;
   outline: none;
   cursor: pointer;
@@ -173,15 +117,12 @@
 }
 .chip.dark {
   background: #141414;
-  color: #fff;
 }
 .insight-list {
   margin-bottom: 2rem;
   margin-left: 0.5rem;
 }
 .insight-list > div {
-  font-size: 1rem;
-  color: #141414;
   margin-bottom: 0.5rem;
 }
 

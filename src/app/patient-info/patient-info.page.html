@@ -6,65 +6,71 @@
 <ion-content [fullscreen]="true" class="ion-padding patient-info-content">
   <!-- Patient Avatar and Name -->
   <div class="patient-avatar-container">
+    <div class="position-relative">
     <img class="patient-avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Patient Avatar" />
+    <span class="patient-status font-manrope  fw-600 success-color position-absolute icon-position">
+    <img src="assets/icon/animated.gif" alt="check" class="check-icon" width="24" height="24">
+    
+    </span>
+  </div>
     <div class="patient-name-row">
-      <span class="patient-name">Olivia Bennett</span>
-      <span class="patient-status"><i class="fa-light fa-circle-check status-confirmed"></i> <span>Active</span></span>
+      <span class="patient-name font-manrope fs-16 fw-600 primary-color">Olivia Bennett</span>
+
     </div>
   </div>
 
-  <ion-card class="patient-info-card no-padding">
+  <ion-card class="patient-info-card no-padding no-margin">
     <ion-list lines="none" class="patient-info-list">
       <ion-item>
-        <i class="fa-light fa-cake-candles info-icon"></i>
-        <ion-label>Age</ion-label>
-        <ion-note slot="end">34 years, 2 months</ion-note>
+        <i class="fa-light fa-cake-candles tertiary-color info-icon"></i>
+        <ion-label class="font-manrope fs-14 fw-500 tertiary-color">Age</ion-label>
+        <ion-note slot="end" class="font-manrope fs-14 fw-600 primary-color">34 years, 2 months</ion-note>
       </ion-item>
       <ion-item>
-        <i class="fa-light fa-calendar-days info-icon"></i>
-        <ion-label>Date of Birth</ion-label>
-        <ion-note slot="end">12/03/1990</ion-note>
+        <i class="fa-light fa-calendar-days info-icon tertiary-color"></i>
+        <ion-label class="font-manrope fs-14 fw-500 tertiary-color">Date of Birth</ion-label>
+        <ion-note slot="end" class="font-manrope fs-14 fw-600 primary-color">12/03/1990</ion-note>
       </ion-item>
       <ion-item (click)="copyMRN('1234567890')" class="mrn-item">
-        <i class="fa-light fa-id-card info-icon"></i>
-        <ion-label>MRN</ion-label>
-        <ion-note slot="end" class="mrn-note">1234567890 <i class="fa-regular fa-copy copy-mrn-icon"></i></ion-note>
+        <i class="fa-light fa-id-card info-icon tertiary-color"></i>
+        <ion-label class="font-manrope fs-14 fw-500 tertiary-color">MRN</ion-label>
+        <ion-note slot="end" class="mrn-note font-manrope fs-14 fw-600 primary-color">1234567890 <i class="fa-regular fa-copy copy-mrn-icon"></i></ion-note>
       </ion-item>
     </ion-list>
   </ion-card>
 
   <ion-card class="patient-info-card no-padding">
-    <ion-card-header class="no-padding">
-      <ion-card-title>Appointment Summary</ion-card-title>
+    <ion-card-header class="no-margin">
+      <ion-card-title class="font-manrope fs-16 fw-600 primary-color no-margin">Appointment Summary</ion-card-title>
     </ion-card-header>
-    <ion-card-content class="no-padding">
-      <ion-label class="sub-heading">
+    <ion-card-content class="no-padding no-margin">
+      <ion-label class="sub-heading font-manrope fs-14 fw-500 tertiary-color no-margin ion-padding ion-padding">
          Consultation With Minor Treatment 
-        <ion-text color="success"> Confirmed</ion-text>
+        <ion-text class="font-manrope fs-14 fw-600 success-color"> Confirmed</ion-text>
       </ion-label>
       <ion-list lines="none" class="no-padding">
         <ion-item>
-          <i class="fa-light fa-user-doctor info-icon"></i>
-          <ion-label>Clinician</ion-label>
-          <ion-note slot="end">Dr. Smith (12345)</ion-note>
+          <i class="fa-light fa-user-doctor info-icon tertiary-color"></i>
+          <ion-label class="font-manrope fs-14 fw-500 tertiary-color">Clinician</ion-label>
+          <ion-note slot="end" class="font-manrope fs-14 fw-600 primary-color">Dr. Smith (12345)</ion-note>
         </ion-item>
         <ion-item>
-          <i class="fa-light fa-calendar-check info-icon"></i>
-          <ion-label>Date</ion-label>
-          <ion-note slot="end">12/03/2024</ion-note>
+          <i class="fa-light fa-calendar-check info-icon tertiary-color"></i>
+          <ion-label class="font-manrope fs-14 fw-500 tertiary-color">Date</ion-label>
+          <ion-note slot="end" class="font-manrope fs-14 fw-600 primary-color">12/03/2024</ion-note>
         </ion-item>
         <ion-item>
-          <i class="fa-light fa-clock info-icon"></i>
-          <ion-label>Time</ion-label>
-          <ion-note slot="end">10:00 AM (30 mins)</ion-note>
+          <i class="fa-light fa-clock info-icon tertiary-color"></i>
+          <ion-label class="font-manrope fs-14 fw-500 tertiary-color">Time</ion-label>
+          <ion-note slot="end" class="font-manrope fs-14 fw-600 primary-color">10:00 AM (30 mins)</ion-note>
         </ion-item>
       </ion-list>
     </ion-card-content>
   </ion-card>
 
-  <ion-segment class="custom-segment" [value]="selectedTab" (ionChange)="onTabChange($event.detail.value)" scrollable>
+  <ion-segment class="custom-segment mt-2 font-manrope fs-14 fw-500" [value]="selectedTab" (ionChange)="onTabChange($event.detail.value)" scrollable>
     <ion-segment-button *ngFor="let tab of tabs" [value]="tab">
-      <ion-label>{{ tab }}</ion-label>
+      <ion-label  >{{ tab }}</ion-label>
     </ion-segment-button>
   </ion-segment>
 

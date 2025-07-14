@@ -1,14 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import { IonIcon } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-vitals',
   templateUrl: './vitals.component.html',
   styleUrls: ['./vitals.component.scss'],
   standalone: true,
-  imports: [IonicModule, IonIcon, CommonModule]
+  imports: [IonicModule, CommonModule]
 })
 export class VitalsComponent {
   vitals = [

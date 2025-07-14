@@ -3,7 +3,7 @@
     <div class="header-avatar" slot="start">
       <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="avatar" />
     </div>
-    <ion-title class="header-title">Dashboard</ion-title>
+    <ion-title class="header-title font-poppins fs-16 fw-500 primary-color">Dashboard</ion-title>
     <div class="header-bell" slot="end">
    <i class="fa-solid fa-bell"></i>
     </div>
@@ -14,8 +14,6 @@
   <div class="ion-padding">
     <app-schedule-list (selectedAppointment)="onSelectedAppointment()"></app-schedule-list>
     <app-quick-stats></app-quick-stats>
-    <!-- <app-pending-actions></app-pending-actions> -->
-    <!-- <app-activity-feed></app-activity-feed> -->
     <app-patient-search (addPatient)="onAddPatient()" (navigateToPatient)="onNavigateToPatient()"></app-patient-search>
     <app-revenue-analytics></app-revenue-analytics>
     <app-patient-feedback></app-patient-feedback>

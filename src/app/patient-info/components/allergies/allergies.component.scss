@@ -15,29 +15,13 @@
   display: flex;
   gap: 10px;
   align-items: center;
-  font-size: 1rem;
   margin-bottom: 2px;
 }
 
 .allergy-severity {
-  font-weight: 400;
   text-transform: capitalize;
 }
-.severity-mild {
-  color: #34c759;
-}
-.severity-moderate {
-  color: #ff9500;
-}
-.severity-severe {
-  color: #ff3b30;
-}
-.severity-fatal {
-  color: #b71c1c;
-}
-.severity-life-threatening {
-  color: #8e24aa;
-}
+
 
 .divider {
   width: 1px;
@@ -57,35 +41,26 @@
   background: #bdbdbd;
 }
 .dot-food {
-  background: #ffb300;
+  color: var(--ion-color-warning) !important;
 }
 .dot-drug {
-  background: #1976d2;
+  color: var(--ion-color-danger) !important;
 }
 .dot-environmental {
-  background: #43a047;
+  color: var(--ion-color-success) !important;
 }
 .dot-other {
-  background: #757575;
+  color: var(--ion-color-danger) !important;
 }
 
 .dot-divider {
-  color: #d3d3d3;
-  font-size: 1.1rem;
   user-select: none;
   display: inline-block;
   vertical-align: middle;
 }
 
-.allergy-type, .allergy-allergen, .allergy-code {
-  color: #888;
-  font-size: 13px;
-}
 
-.allergy-notes {
-  font-size: 13px;
-  color: #888;
-}
+
 
 .allergy-actions {
   display: flex;
@@ -93,13 +68,9 @@
   align-items: center;
 }
 .edit-icon {
-  color: #242424;
-  font-size: 1.1rem;
   transition: color 0.2s;
 }
 .delete-icon {
-  color: #ff3b30;
-  font-size: 1.1rem;
   transition: color 0.2s;
 }
 

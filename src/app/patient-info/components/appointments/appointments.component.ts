@@ -27,8 +27,8 @@ const APPOINTMENTS: Appointment[] = [
   standalone: true,
   imports: [
     CommonModule, FormsModule,
-    IonContent, IonHeader, IonToolbar, IonList, IonLabel, IonNote, IonSearchbar,
-    HeaderComponent
+   IonList, IonLabel, IonNote, IonSearchbar
+    
   ]
 })
 export class AppointmentsComponent implements OnInit {

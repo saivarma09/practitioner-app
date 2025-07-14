@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { AddPatientService } from '../../services/add-patient/add-patient.service';
 import { CommonModule } from '@angular/common';
-import { IonGrid, IonRow, IonCol, IonContent, IonAccordionGroup, IonAccordion, IonItem, IonLabel } from '@ionic/angular/standalone';
+import { IonRow, IonCol, IonContent, IonAccordionGroup, IonAccordion, IonItem, IonLabel } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-review',
   templateUrl: './review.component.html',
   styleUrls: ['./review.component.scss'],
-  imports: [CommonModule, IonGrid, IonRow, IonCol, IonContent, IonAccordionGroup, IonAccordion, IonItem, IonLabel],
+  imports: [CommonModule, IonRow, IonCol, IonContent, IonAccordionGroup, IonAccordion, IonItem, IonLabel],
 })
 export class ReviewComponent implements OnInit {
   patientDetails: any;

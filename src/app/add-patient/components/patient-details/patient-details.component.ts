@@ -2,12 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
 import { ButtonComponent } from '../../../shared/components/button/button.component';
-import { HeaderComponent } from '../../../shared/components/header/header.component';
-import { IonList, IonItem, IonInput, IonSelect, IonSelectOption, IonGrid, IonRow, IonCol, IonLabel, IonContent } from '@ionic/angular/standalone';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatSelectModule} from '@angular/material/select';
+import { IonInput, IonSelect, IonSelectOption, IonGrid, IonRow, IonCol, IonContent } from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 import { AddPatientService } from '../../services/add-patient/add-patient.service';
 @Component({
@@ -15,7 +10,7 @@ import { AddPatientService } from '../../services/add-patient/add-patient.servic
   templateUrl: './patient-details.component.html',
   styleUrls: ['./patient-details.component.scss'],
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule,MatSelectModule, ButtonComponent,MatFormFieldModule, MatInputModule,MatDatepickerModule, HeaderComponent, IonList, IonItem,IonContent, IonInput, IonSelect,IonLabel, IonSelectOption, IonGrid, IonRow, IonCol]
+  imports: [CommonModule, ReactiveFormsModule, ButtonComponent, IonContent, IonInput, IonSelect, IonSelectOption, IonGrid, IonRow, IonCol]
 })
 export class PatientDetailsComponent implements OnInit {
 

@@ -3,11 +3,8 @@
 }
 
 .header-title {
-  // font-size: 1.5rem;
-  font-weight: 400;
   text-align: center;
   width: 100%;
-  font-family: 'Manrope', 'Noto Sans', sans-serif !important;
 }
 
 .search-bar-container {
@@ -17,8 +14,6 @@
 ion-searchbar.custom-searchbar {
   --background: #ededed !important;
   --border-radius: 16px;
-  --color: #141414;
-  font-size: 1.1rem;
   --box-shadow: none;
   --placeholder-color: #bdbdbd;
   --icon-color: #bdbdbd;
@@ -35,9 +30,6 @@ ion-searchbar.custom-searchbar {
   border: none;
   border-radius: 999px;
   padding: 0.5rem 1.3rem;
-  font-size: 1.05rem;
-  // font-weight: 400;
-  color: #141414;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -67,30 +59,17 @@ ion-searchbar.custom-searchbar {
   flex-direction: column;
 }
 
-.patient-name {
-  font-size: 1rem;
-  // font-weight: 800;
-  color: #141414;
-  font-family: 'Manrope', 'Noto Sans', sans-serif !important;
-}
+
 
 .test-type {
-  font-size: 1rem;
-  color: #888;
-  // font-weight: 400;
   margin-top: 0.1rem;
 }
 
 .followup-status {
-  font-size: 1rem;
-  // font-weight: 400;
-  color: #141414;
   white-space: nowrap;
   margin-left: 1.2rem;
 }
 .followup-status.urgent {
-  color: #d32f2f;
 }
 .followup-status.past-due {
-  color: #ff9800;
 } 

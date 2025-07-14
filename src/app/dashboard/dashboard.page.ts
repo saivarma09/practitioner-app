@@ -17,7 +17,7 @@ import { Router } from '@angular/router';
   templateUrl: './dashboard.page.html',
   styleUrls: ['./dashboard.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, ScheduleListComponent, QuickStatsComponent, PendingActionsComponent, ActivityFeedComponent, PatientSearchComponent, RevenueAnalyticsComponent, PatientFeedbackComponent, HealthAnalyticsComponent]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, ScheduleListComponent, QuickStatsComponent, PatientSearchComponent, RevenueAnalyticsComponent, PatientFeedbackComponent, HealthAnalyticsComponent]
 })
 export class DashboardPage implements OnInit {
 

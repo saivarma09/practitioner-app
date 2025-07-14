@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
-import {  ModalController } from '@ionic/angular/standalone';
+import { ModalController } from '@ionic/angular/standalone';
 import { ButtonComponent } from 'src/app/shared/components/button/button.component';
 import { ClinicalNotesModelComponent } from '../clinical-notes-model/clinical-notes-model.component';
 

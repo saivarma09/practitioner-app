@@ -1,12 +1,59 @@
-<ion-header>
-  <div class="header-container">
-    <div class="header-title">Add Clinical Note</div>
+<ion-header class="ion-padding">
+  <div class="header-container d-flex align-items-center justify-content-between">
+    <div class="header-title font-manrope fs-16 fw-600 primary-color">Add Clinical Note</div>
     <i class="fa-light fa-xmark-large cursor-pointer" (click)="close()"></i>
   </div>
 </ion-header>
-<ion-content>
-  <div class="note-modal-content ion-padding">
-    <textarea class="note-textarea" placeholder="Type your note..." rows="5"></textarea>
+<ion-content class="ion-padding-bottom ">
+  <div class="note-modal-content ion-padding hv-60 overflow-auto">
+
+    <div class="image-actions-container position-relative">
+      <div class="image-actions position-absolute">
+        <button class="image-btn font-manrope fs-14 fw-500" (click)="triggerFileInput()">
+          <i class="fa-light fa-upload"></i> Upload
+        </button>
+        <button class="image-btn font-manrope fs-14 fw-500" (click)="openCamera()">
+          <i class="fa-light fa-camera"></i> Camera
+        </button>
+        <input type="file" #fileInput accept="image/*" (change)="onFileSelected($event)" style="display: none;"
+          multiple />
+      </div>
+      <textarea class="note-textarea " placeholder="Type your note..." rows="5"> </textarea>
+    </div>
+    <!-- Image list with clickable labels -->
+
+    <div *ngIf="imagePreviews.length" class="image-list-container">
+      <div class="font-manrope fs-16 fw-500 primary-color mb-1">Uploaded Images</div>
+      <div *ngFor="let img of imagePreviews; let i = index"
+        class="image-list-item d-flex align-items-center justify-content-between gap-2 p-6">
+        <div class="image-label font-manrope fs-14 fw-500 info-color" (click)="openImagePreview(img.src)">{{ img.name }}
+        </div>
+
+        <div class="d-flex align-items-center gap-05">
+          <i class="fa-light fa-eye" (click)="openImagePreview(img.src)"></i>
+          <i class="fa-light fa-trash" (click)="deleteImage(i)"></i>
+        </div>
+
+      </div>
+    </div>
+    <!-- Image preview modal -->
+    <ion-modal [isOpen]="showImageModal" (ionModalDidDismiss)="closeImagePreview()" [initialBreakpoint]="0.8">
+      <ng-template>
+      <ion-header class="ion-padding">
+        <div class="header-container d-flex align-items-center justify-content-between">
+          <div class="header-title font-manrope fs-14 fw-500 primary-color">Image Preview</div>
+          <i class="fa-light fa-xmark-large cursor-pointer" (click)="close()"></i>
+        </div>
+      </ion-header>
+
+      <ion-content class="ion-padding">
+        
+          <div class="image-preview-modal d-flex align-items-center justify-content-center w-100 hv-70">
+            <img [src]="selectedPreview" alt="Preview" />
+          </div>
+      
+      </ion-content>  </ng-template>
+    </ion-modal>
     <div class="mic-btn-container-vertical">
       <div class="wave-bar-center">
         <svg _ngcontent-ng-c2013397884="" _ngcontent-ng-c3434871109="" width="220" height="100" viewBox="0 0 250 60"
@@ -31,8 +78,9 @@
             fill="#242424"></rect>
           <rect _ngcontent-ng-c2013397884="" _ngcontent-ng-c3434871109="" x="172" y="26" width="6" height="34" rx="3"
             fill="#242424"></rect>
-          <rect _ngcontent-ng-c2013397884="" _ngcontent-ng-c3434871109="" x="190" y="32" width="6" height="24" rx="3"
+          <rect _ngcontent-ng-c2013397884="" _ngcontent-ng-c3434871109="" x="190" y="26" width="6" height="34" rx="3"
             fill="#242424"></rect>
+
           <rect _ngcontent-ng-c2013397884="" _ngcontent-ng-c3434871109="" x="208" y="16" width="6" height="56" rx="3"
             fill="#242424"></rect>
           <rect _ngcontent-ng-c2013397884="" _ngcontent-ng-c3434871109="" x="226" y="32" width="6" height="24" rx="3"
@@ -41,7 +89,7 @@
 
       </div>
       <button class="mic-btn" (click)="shuffleBars()">
-        <i class="fa-solid fa-microphone"></i>
+        <i class="fa-light fa-microphone fs-20 secondary-color"></i>
       </button>
     </div>
   </div>

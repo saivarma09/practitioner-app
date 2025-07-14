@@ -28,7 +28,7 @@ const PATIENTS: Patient[] = [
   templateUrl: './patient.page.html',
   styleUrls: ['./patient.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, HeaderComponent, IonSearchbar, IonList, IonItem, IonLabel, IonNote, IonCard, IonCardContent, IonIcon]
+  imports: [IonContent, IonHeader, IonToolbar, CommonModule, FormsModule, HeaderComponent, IonSearchbar, IonList, IonCard, IonCardContent]
 })
 export class PatientPage implements OnInit {
   patients: Patient[] = PATIENTS;

@@ -9,14 +9,15 @@ interface Allergy {
   allergen: string;
   allergenCode: string;
   notes: string;
+  icon: string;
 }
 
 const ALLERGIES: Allergy[] = [
-  { severity: 'Severe', type: 'Food', allergen: 'Peanuts', allergenCode: 'A001', notes: 'Carries epipen' },
-  { severity: 'Moderate', type: 'Drug', allergen: 'Penicillin', allergenCode: 'D002', notes: 'Rash and swelling' },
-  { severity: 'Mild', type: 'Environmental', allergen: 'Pollen', allergenCode: 'E003', notes: 'Sneezing in spring' },
-  { severity: 'Fatal', type: 'Food', allergen: 'Shellfish', allergenCode: 'A004', notes: 'Severe reaction' },
-  { severity: 'Life-threatening', type: 'Other', allergen: 'Latex', allergenCode: 'O005', notes: 'Contact dermatitis' },
+  { severity: 'Severe', icon: 'fa-light fa-pot-food', type: 'Food', allergen: 'Peanuts', allergenCode: 'A001', notes: 'Carries epipen' },
+  { severity: 'Moderate', icon: 'fa-light fa-capsules', type: 'Drug', allergen: 'Penicillin', allergenCode: 'D002', notes: 'Rash and swelling' },
+  { severity: 'Mild', icon: 'fa-light fa-tree', type: 'Environmental', allergen: 'Pollen', allergenCode: 'E003', notes: 'Sneezing in spring' },
+  { severity: 'Fatal', icon: 'fa-light fa-pot-food', type: 'Food', allergen: 'Shellfish', allergenCode: 'A004', notes: 'Severe reaction' },
+  { severity: 'Life-threatening', icon: 'fa-light fa-skull-crossbones', type: 'Other', allergen: 'Latex', allergenCode: 'O005', notes: 'Contact dermatitis' },
 ];
 
 @Component({

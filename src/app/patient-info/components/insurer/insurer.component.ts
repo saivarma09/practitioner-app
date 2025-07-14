@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonList, IonLabel, IonNote } from '@ionic/angular/standalone';
+import { ButtonComponent } from 'src/app/shared/components/button/button.component';
 
 interface Insurer {
   name: string;
@@ -11,6 +12,7 @@ interface Insurer {
   expired: boolean;
   status: 'Primary' | 'Secondary';
   verified: boolean;
+  logo: string;
 }
 
 @Component({
@@ -18,27 +20,29 @@ interface Insurer {
   templateUrl: './insurer.component.html',
   styleUrls: ['./insurer.component.scss'],
   standalone: true,
-  imports: [CommonModule, FormsModule, IonList, IonLabel, IonNote]
+  imports: [CommonModule, FormsModule, IonList, IonLabel, IonNote, ButtonComponent]
 })
 export class InsurerComponent implements OnInit {
   insurers: Insurer[] = [
     {
-      name: 'Blue Cross',
+      name: 'Bupa',
       membershipNumber: 'BC123456',
       scheme: 'Gold',
-      expiryDate: '2025-12-31',
+      expiryDate: '2025-12-31',   
       expired: false,
       status: 'Primary',
       verified: true,
+      logo: 'assets/icon/insurer/bupa.svg',
     },
     {
-      name: 'Aetna',
+      name: 'AXA',
       membershipNumber: 'AE987654',
       scheme: 'Silver',
       expiryDate: '2023-06-30',
       expired: true,
       status: 'Secondary',
       verified: false,
+      logo: 'assets/icon/insurer/axa.svg',
     },
   ];
 

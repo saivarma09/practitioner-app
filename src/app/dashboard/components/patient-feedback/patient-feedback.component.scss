@@ -15,16 +15,7 @@
   width: 100%;
   margin-bottom: 0.2rem;
 }
-.feedback-rating {
-  font-size: 2.2rem;
-  font-weight: 400;
-  color: #141414;
-}
-.feedback-reviews {
-  font-size: 1.1rem;
-  color: #888;
-  font-weight: 400;
-}
+
 .feedback-stars {
   display: flex;
   align-items: center;
@@ -33,11 +24,8 @@
   margin-top: 0.2rem;
 }
 .feedback-stars i {
-  font-size: 1.3rem;
-  color: #141414;
 }
 .feedback-stars i.fa-regular {
-  color: #dbdbdb;
 }
 .feedback-breakdown {
   width: 100%;
@@ -51,9 +39,6 @@
 }
 .feedback-row-label {
   width: 18px;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #141414;
 }
 .feedback-row-bar {
   flex: 1;
@@ -69,16 +54,10 @@
 .feedback-row-percent {
   width: 36px;
   text-align: right;
-  font-size: 1rem;
-  color: #888;
 }
 
 
 .section-title {
-  font-weight: 400;
-  font-size: 1rem;
-  font-family: 'Manrope', 'Noto Sans', sans-serif !important;
-  color: #141414;
   margin-bottom: 2px;
   white-space: nowrap;
   overflow: hidden;

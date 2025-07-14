@@ -1,4 +1,4 @@
-<div class="section-title">Patients</div>
+<div class="font-manrope fs-16 fw-600 primary-color mb-1">Patients</div>
 <!-- <ion-searchbar class="no-padding" placeholder="Search for patients"></ion-searchbar> -->
 <ion-list class="custom-list">
   <ion-item  lines="none" (click)="navigateToPatient.emit()">
@@ -6,17 +6,17 @@
     <div class="search-icon" slot="start">
       <i class="fa-regular fa-user"></i>
     </div>
-    <ion-label>Patient Records</ion-label>
+    <ion-label class="font-manrope fs-16 fw-500 primary-color">Patient Records</ion-label>
     </div>
- <i class="fa-solid fa-chevron-right" slot="end"></i>
+ <i class="fa-light fa-chevron-right" slot="end"></i>
   </ion-item>
   <ion-item  lines="none" (click)="addPatient.emit()">
     <div class="d-flex gap-1 align-items-center">
     <div class="search-icon" slot="start">
      <i class="fa-solid fa-user-group"></i>
     </div>
-    <ion-label>Quick Add Patient</ion-label>
+    <ion-label class="font-manrope fs-16 fw-500 primary-color">Quick Add Patient</ion-label>
     </div>
- <i class="fa-solid fa-chevron-right" slot="end"></i>
+ <i class="fa-light fa-chevron-right" slot="end"></i>
   </ion-item>
 </ion-list>

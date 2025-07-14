@@ -4,8 +4,8 @@ import { IonList, IonLabel, IonNote } from '@ionic/angular/standalone';
 
 interface Address {
   type: string;
+  icon: string;
   postalCode: string;
-  prefix: string;
   addressLine1: string;
   addressLine2?: string;
   addressLine3?: string;
@@ -17,6 +17,7 @@ interface Telecom {
   type: string;
   number: string;
   option: 'Primary' | 'Preferred';
+  icon: string;
 }
 
 @Component({
@@ -30,8 +31,8 @@ export class ContactDetailsComponent implements OnInit {
   addresses: Address[] = [
     {
       type: 'Home',
+      icon: 'fa-light fa-house',
       postalCode: '12345',
-      prefix: 'Mr.',
       addressLine1: '123 Main St',
       addressLine2: 'Apt 4B',
       addressLine3: '',
@@ -40,8 +41,8 @@ export class ContactDetailsComponent implements OnInit {
     },
     {
       type: 'Work',
+      icon: 'fa-light fa-building',
       postalCode: '67890',
-      prefix: 'Ms.',
       addressLine1: '456 Business Rd',
       addressLine2: '',
       addressLine3: '',
@@ -51,8 +52,8 @@ export class ContactDetailsComponent implements OnInit {
   ];
 
   telecoms: Telecom[] = [
-    { type: 'Mobile', number: '+1 555-123-4567', option: 'Primary' },
-    { type: 'Home', number: '+1 555-987-6543', option: 'Preferred' },
+    { type: 'Mobile', number: '+1 555-123-4567', option: 'Primary', icon: 'fa-light fa-mobile' },
+    { type: 'Home', number: '+1 555-987-6543', option: 'Preferred', icon: 'fa-light fa-house' },
   ];
 
   constructor() { }
@@ -61,12 +62,12 @@ export class ContactDetailsComponent implements OnInit {
 
   addAddress() {
     this.addresses.push({
-      type: '', postalCode: '', prefix: '', addressLine1: '', addressLine2: '', addressLine3: '', city: '', usage: 'Primary'
+      type: '', icon: '', postalCode: '', addressLine1: '', addressLine2: '', addressLine3: '', city: '', usage: 'Primary'
     });
   }
 
   addTelecom() {
-    this.telecoms.push({ type: '', number: '', option: 'Primary' });
+    this.telecoms.push({ type: '', number: '', option: 'Primary', icon: '' });
   }
 
   editAddress(address: Address) {

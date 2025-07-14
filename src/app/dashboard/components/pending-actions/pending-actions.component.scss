@@ -9,25 +9,10 @@
 
 }
 .pending-icon i {
-  font-size: 1rem;
-  color: #141414;
-  font-weight: 400;
   /* Use regular style for thinner icons */
 }
-.pending-title {
-  font-weight: 400;
-  font-size: 1rem;
-font-family: 'Poppins', 'Noto Sans', sans-serif !important;
-  color: #141414;
-}
-.pending-subtitle {
-  font-size: 0.95rem;
-  color: #888;font-family: 'Poppins', 'Noto Sans', sans-serif !important;
-  font-weight: 400;
-}
+
 .chevron-right {
-  font-size: 1.2rem;
-  color: #141414;
   margin-left: auto;
 }
 ion-item {
@@ -39,10 +24,6 @@ ion-item {
   align-items: center;
 }
 .section-title {
-  font-weight: 400;
-  font-size: 1rem;
-  font-family: 'Manrope', 'Noto Sans', sans-serif !important;
-  color: #141414;
   margin-bottom: 2px;
   white-space: nowrap;
   overflow: hidden;

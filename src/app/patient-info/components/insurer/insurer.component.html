@@ -1,32 +1,37 @@
 <div class="insurer-list-content">
   <ion-list class="insurer-list">
-    <div *ngFor="let insurer of insurers" class="d-flex align-items-center justify-content-between w-100 insurer-card position-relative">
+    <div *ngFor="let insurer of insurers"
+      class="d-flex align-items-center justify-content-between w-100 insurer-card position-relative">
       <!-- Verified icon in top right -->
-      <span *ngIf="insurer.verified" class="verified-badge-topright">
-        <i class="fa-light fa-badge-check info-icon verified-icon"></i>
-      </span>
-      <ion-label class="d-flex flex-column gap-0-5">
+      <ion-label class="d-flex flex-column gap-05">
         <div class="insurer-main-info flex-wrap">
           <!-- <i class="fa-light fa-shield-heart info-icon"></i> -->
-          <span class="insurer-name">{{insurer.name}}</span>
-          <span class="dot-divider">•</span>
-          <span class="insurer-status status-{{insurer.status.toLowerCase()}}">{{insurer.status}}</span>
+           <img [src]="insurer.logo" alt="insurer-logo" class="insurer-logo" width="30" height="30">
+          <span class="insurer-name font-manrope fs-16 fw-600 primary-color d-flex align-items-center gap-05">{{insurer.name}} <span *ngIf="insurer.verified" class="">
+            <i class="fa-light fa-badge-check  verified-icon fs-16"></i>
+          </span></span>
+
         </div>
         <div class="insurer-details flex-wrap">
           <!-- <i class="fa-light fa-id-card info-icon"></i> -->
-          <span class="insurer-membership">{{insurer.membershipNumber}}</span>
+          <span class="insurer-membership font-manrope fs-14 fw-500 tertiary-color">{{insurer.membershipNumber}}</span>
+          <span class="dot-divider">•</span>
+          <span
+            class="insurer-status status-{{insurer.status.toLowerCase()}} font-manrope fs-14 fw-500 tertiary-color">{{insurer.status}}</span>
         </div>
         <div class="insurer-details flex-wrap">
           <!-- <i class="fa-light fa-calendar-xmark info-icon" [ngClass]="{'expired-icon': insurer.expired}"></i> -->
-          <span class="insurer-expiry" [ngClass]="{'expired': insurer.expired}">Expiry: {{insurer.expiryDate}}</span>
+          <span class="insurer-expiry font-manrope fs-14 fw-500 tertiary-color"
+            [ngClass]="{'expired': insurer.expired}">Expiry: {{insurer.expiryDate}}</span>
         </div>
       </ion-label>
       <div class="d-flex flex-column align-items-center gap-1">
-        <ion-note slot="end" class="insurer-actions">
-          <i class="fa-light fa-pen-to-square edit-icon" (click)="editInsurer(insurer)"></i>
-          <i class="fa-light fa-link-slash unlink-icon" (click)="unlinkInsurer(insurer)"></i>
+       
+        <ion-note slot="end" class="insurer-actions primary-color">
+          <i class="fa-light fa-pen-to-square edit-icon fs-16" (click)="editInsurer(insurer)"></i>
+          <i class="fa-light fa-link-slash unlink-icon fs-16" (click)="unlinkInsurer(insurer)"></i>
         </ion-note>
-        <button *ngIf="!insurer.verified" class="verify-btn" (click)="verifyInsurer(insurer)">Verify</button>
+        <!-- <app-button *ngIf="!insurer.verified" buttonLabel="Verify" (click)="verifyInsurer(insurer)"></app-button> -->
       </div>
     </div>
   </ion-list>

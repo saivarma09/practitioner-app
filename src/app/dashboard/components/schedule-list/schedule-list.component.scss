@@ -1,8 +1,4 @@
 .section-title {
-  font-weight: 400;
-  font-size: 1rem;
-  font-family: 'Manrope', 'Noto Sans', sans-serif !important;
-  color: #141414;
   margin-bottom: 1rem;
   white-space: nowrap;
   overflow: hidden;
@@ -94,20 +90,13 @@
 }
 
 .schedule-title {
-  font-size: 1rem;
-  font-family: 'Poppins', 'Noto Sans', sans-serif !important;
-  color: #141414;
   margin-bottom: 2px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 400;
 }
 
 .schedule-time {
-  font-size: 0.9rem;
-  color: #666;
-  font-weight: 400;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -147,16 +136,10 @@
   }
   
   ion-icon {
-    font-size: 1.5rem;
-    color: #ffffff;
   }
 }
 
-.message-option {
-  color: #ffffff;
-  font-size: 1.5rem;
 
-}
 
 // Animation improvements for smoother performance
 @media (prefers-reduced-motion: no-preference) {
@@ -198,3 +181,5 @@
     transform-origin: right center;
   }
 }
+
+

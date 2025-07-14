@@ -1,6 +1,4 @@
 .clinical-notes-title {
-  font-weight: 400;
-  font-size: 1.2rem;
   margin-bottom: 1rem;
 }
 .clinical-note-list {
@@ -13,26 +11,18 @@
   margin-bottom: 1.2rem;
 }
 .note-icon {
-  font-size: 1.5rem;
   margin-top: 0.1rem;
 }
 .note-title {
   // font-weight: bold;
-  font-size: 1.1rem;
 }
-.note-date {
-  color: #888;
-  font-size: 1rem;
-}
+
 .new-note-btn-container {
   display: flex;
   justify-content: flex-end;
 }
 ion-button.new-note-btn {
   background: #141414;
-  color: #fff;
-  font-weight: 400;
-  font-size: 1.1rem;
   border-radius: 999px;
   padding: 0 2.2rem;
   height: 48px;
@@ -52,7 +42,6 @@ ion-button.new-note-btn {
   align-items: center;
 }
 .stepper-icon {
-  font-size: 1.5rem;
   z-index: 1;
   background: #fff;
   border-radius: 50%;

@@ -19,26 +19,22 @@ ion-segment.custom-segment {
 }
 
 ion-segment-button {
-  --color: #6b7a89;
-  --color-checked: #111;
   --background: transparent;
   --background-checked: transparent;
   --indicator-color: transparent;
   --padding-start: 0;
   --padding-end: 0;
   --indicator-box-shadow: none !important;
-  font-weight: 400;
-  font-size: 1.1rem;
   justify-content: flex-start;
   text-align: left;
   border: none;
   box-shadow: none;
   margin: 0px 12px;
   padding: 0px 0.5rem !important;
-  transition: color 0.2s, font-weight 0.2s;
   background: transparent;
   text-transform: none !important;
   min-width: fit-content;
+  color: var(--ion-color-tertiary) !important;
   &::before{
     border: none !important;
   }
@@ -51,19 +47,14 @@ ion-segment-button {
 }
 
 ion-segment-button.segment-button-checked {
-  font-weight: 400;
-  color: #242424 !important;
   background: transparent;
   border: none !important;
   border-bottom: 2px solid #242424 !important;
   border-radius: 10px 10px 0 0;
   box-shadow: none;
+  color: var(--ion-color-primary) !important;
   text-transform: none !important;
   ion-label{
-    font-size:1rem !important;
-    font-family: 'Manrope', Arial, sans-serif !important;
-    font-weight: 400;
-    color: #242424 !important;
     text-transform: none !important;
   }
   
@@ -97,8 +88,6 @@ ion-card.patient-info-card {
 
 
 .sub-heading {
-  font-size: 1rem;
-  font-family: 'Manrope', Arial, sans-serif !important;
   margin-top: 1rem;
   display: flex;
   align-items: center;
@@ -108,25 +97,6 @@ ion-card.patient-info-card {
 .sub-heading .info-icon {
   margin-right: 8px;
   margin-left: 0;
-}
-
-.name {
-  font-size: 1.4rem;
-  font-family: 'Manrope', Arial, sans-serif !important;
-  font-weight: 400;
-}
-
-ion-label{
-  font-size:14px !important;
-  font-family: 'Manrope', Arial, sans-serif !important;
-  font-weight: 400;
-  color: #a6a6a6 !important
-}
-
-ion-note{
-  font-size: 14px !important;
-  color: #242424 !important;
-  font-family: 'Manrope', Arial, sans-serif !important;
 }
 
 .patient-info-content {
@@ -153,27 +123,15 @@ ion-note{
   align-items: center;
   gap: 0.7rem;
 }
-.patient-name {
-  font-size: 1.3rem;
-  font-family: 'Manrope', Arial, sans-serif !important;
-  font-weight: 600;
-  color: #242424;
-}
+
 .patient-status {
-  font-size: 1rem;
-  color: #2ecc71;
   display: flex;
   align-items: center;
   gap: 0.3rem;
 }
-.status-confirmed {
-  color: #2ecc71;
-  font-size: 1.1rem;
-}
+
 .info-icon {
   margin-right: 12px;
-  font-size: 1.1rem;
-  color: #6b7a89;
   min-width: 18px;
   text-align: center;
   vertical-align: middle;
@@ -192,18 +150,11 @@ ion-note{
   gap: 0.3rem;
 }
 .copy-mrn-icon {
-  font-size: 1rem;
-  color: #888;
   transition: color 0.2s;
-}
-.mrn-item.copied .copy-mrn-icon {
-  color: #2ecc71;
 }
 
 ion-fab .fab-main {
   background: #242424 !important;
-  color: #fff !important;
-  font-size: 1.3rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.13);
   border-radius: 50%;
   width: 56px;
@@ -220,3 +171,27 @@ ion-fab .fab-main {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: none; }
 } 
+
+
+ion-card-header{
+  padding: 0px  16px !important;
+}
+
+
+.icon-position{
+  top: 0;
+  right: 0;
+}
+.fa-badge{
+  animation: badge-animation 4s linear infinite;
+
+}
+
+@keyframes badge-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

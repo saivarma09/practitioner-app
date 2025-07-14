@@ -5,22 +5,24 @@
   <ion-list class="allergy-list">
     <div *ngFor="let allergy of filteredAllergies"
          class="d-flex align-items-center justify-content-between w-100 allergy-card">
-      <ion-label class="d-flex flex-column gap-0-5">
-        <div class="d-flex align-items-center">
-          <span class="type-dot" [ngClass]="getTypeDotClass(allergy.type)"></span>
-          <span class="allergy-severity" >{{allergy.severity}}</span>
+      <ion-label class="d-flex flex-column gap-05">
+        <div class="d-flex align-items-center gap-05">
+          <i class=" {{allergy.icon}} " [ngClass]="getTypeDotClass(allergy.type)"></i>
+          <span class="allergy-allergen font-manrope fs-16 fw-600 primary-color">{{allergy.allergen}}</span>
+          <span class="allergy-code font-manrope fs-16 fw-600 primary-color">({{allergy.allergenCode}})</span>
+      
         </div>
         <div class="allergy-main-info">
-          <span class="allergy-type">{{allergy.type}}</span>
+          <span class="allergy-severity font-manrope fs-14 fw-500 tertiary-color">{{allergy.severity}}</span>
           <span class="dot-divider">•</span>
-          <span class="allergy-allergen">{{allergy.allergen}}</span>
-          <span class="allergy-code">({{allergy.allergenCode}})</span>
+          <span class="allergy-type font-manrope fs-14 fw-500 tertiary-color">{{allergy.type}}</span>
+
         </div>
-        <div class="allergy-notes">{{allergy.notes}}</div>
+        <div class="allergy-notes font-manrope fs-14 fw-500 tertiary-color">{{allergy.notes}}</div>
       </ion-label>
-      <ion-note slot="end" class="allergy-actions">
-        <i class="fa-light fa-pen-to-square edit-icon" (click)="onEdit(allergy)"></i>
-        <i class="fa-light fa-trash delete-icon" (click)="onDelete(allergy)"></i>
+      <ion-note slot="end" class="allergy-actions primary-color">
+        <i class="fa-light fa-pen-to-square edit-icon fs-16" (click)="onEdit(allergy)"></i>
+        <i class="fa-light fa-trash delete-icon fs-16" (click)="onDelete(allergy)"></i>
       </ion-note>
     </div>
   </ion-list>

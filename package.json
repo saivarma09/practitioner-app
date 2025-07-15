@@ -32,6 +32,7 @@
     "@capacitor/splash-screen": "^7.0.1",
     "@capacitor/status-bar": "7.0.1",
     "@ionic/angular": "^8.0.0",
+    "cordova-plugin-inappbrowser": "^6.0.0",
     "ionicons": "^7.0.0",
     "odometer": "^0.4.8",
     "rxjs": "~7.8.0",

@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'login',
     pathMatch: 'full',
   },
   {
@@ -52,5 +52,10 @@ export const routes: Routes = [
   {
     path: 'patient-info',
     loadComponent: () => import('./patient-info/patient-info.page').then( m => m.PatientInfoPage)
+  },
+  {
+    path: 'login',
+    loadComponent: () => import('./login/login.page').then( m => m.LoginPage)
   }
+
 ];

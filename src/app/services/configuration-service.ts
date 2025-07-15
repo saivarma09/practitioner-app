@@ -3,6 +3,43 @@ import { environment } from 'src/environments/environment';
 import { ENVIRONMENT_CONFIGS, EnvironmentConfig, EnvironmentConfigList } from '../core/config';
 import { PkceService } from './pkce.service';
 import { SsoAuthenticationService } from './sso-authentication.service';
+import { Router } from '@angular/router';
+
+export interface UserPermission {
+  code: string;
+  description: string;
+  id: string;
+  identifier: string;
+  isShow: boolean;
+  name: string;
+  status: string;
+}
+export enum AccessFlag {
+
+  ADD_PRESCRIPTION = 'Prescribe_ePrescription_1_0',
+  DELETE_PRESCRIPTION = 'Delete_ePrescription_1_0',
+  VIEW_SITE_PRESCRIPTION = 'View_Site_ePrescriptions_1_0',
+  // Prescriptions list view
+  // Create Prescription
+  // Edit Prescription
+  // Send Prescription to patient
+
+  SIGN_PRESCRIPTION = 'Sign_ePrescription_1_0',
+  // Prescriptions list view
+  // Create Prescription
+  // Edit Prescription
+  // Send Prescription to patient
+  // Create digital signature
+  // View digital signature
+  // Sign Prescription
+
+  // Access to formulary
+  FORMULARY_ACCESS = 'Formulary_Feature_1_0',
+
+  //Admin access
+  DIGITAL_SIGNATURE_ADMIN = 'Digital_Signature_Submission_Review_1_0',
+  ASSET_MODULE = 'Asset_Management_1_0'
+}
 
 @Injectable({
   providedIn: 'root'
@@ -11,10 +48,13 @@ export class ConfigurationService {
 
   paramStateValue: string = '';
   prompt: 'none' | 'login' | 'consent' = 'none';
+  siteId: string = '';
+  state: string = '';
 
   constructor(
-    private readonly ssoAuthenticationService : SsoAuthenticationService
-  ) { 
+    private readonly ssoAuthenticationService: SsoAuthenticationService,
+    private readonly router: Router
+  ) {
     this.handleUrlParams()
   }
 
@@ -51,7 +91,7 @@ export class ConfigurationService {
   }
 
   private async handleSsoAuthentication() {
-    const user = sessionStorage.getItem('user');
+    const user = sessionStorage.getItem('ssoSession');
     const decodedState = this.paramStateValue || this.decodeState(new URL(window.location.href).searchParams.get('state') || '');
 
     if (!user && (window.location.href.includes('/auth/') || decodedState.includes('auth'))) {
@@ -114,7 +154,7 @@ export class ConfigurationService {
             user: session.user,
             userPermissions: this.getuserPermissions(features),
           };
-          this.sessionService.epxSessionTransaction = ssoSession;
+          localStorage.setItem('ssoSession', JSON.stringify(ssoSession));
           this.checkAccessiblePage();
           resolve(true);
         } else {
@@ -122,6 +162,42 @@ export class ConfigurationService {
         }
       }
     })
+  }
+
+  checkAccessiblePage() {
+
+    if (this.userHasFeature()) {
+      console.log('redirect url ', this.redirectUrl);
+      this.router.navigate(this.redirectUrl)
+    }
+    else {
+    }
+
+  }
+
+  userHasFeature() {
+    if (this.isDigitalSignatureAdmin) {
+      return localStorage.getItem('ssoSession')?.userPermissions.find(value => value.toLowerCase() === AccessFlag.DIGITAL_SIGNATURE_ADMIN.toLowerCase());
+    }
+
+    return
+  }
+
+  get redirectUrl(): string[] {
+
+    if (this.isPrescriptions) return ['/auth', 'prescription'];
+    return ['/'];
+  }
+
+  getuserPermissions(userPermissions: UserPermission[]): string[] {
+    const accessFlagValues = Object.values(AccessFlag) as string[];
+    return userPermissions
+      .filter(permission => accessFlagValues.includes(permission.id))
+      .map(permission => permission.id);
+  }
+
+  get isDigitalSignatureAdmin(): boolean {
+    return this.currentUrl.includes('admin') || this.paramStateValue.includes(ParamStateValues.DIGITAL_SIGNATURE)
   }
 
   get clientId(): string {
@@ -190,6 +266,7 @@ export class ConfigurationService {
       environment.healthcodeAccounts_host = environmentConfig.healthcodeAccounts_host ? environmentConfig.healthcodeAccounts_host : environment.healthcodeAccounts_host;
       environment.healthcodeSSO_host = environmentConfig.healthcodeSSO_host ? environmentConfig.healthcodeSSO_host : environment.healthcodeSSO_host;
       environment.healthcodeSSO_redirectUri = environmentConfig.healthcodeSSO_redirectUri ? environmentConfig.healthcodeSSO_redirectUri : environment.healthcodeSSO_redirectUri;
+      environment.pracAppClientId = environmentConfig.pracAppClientId ? environmentConfig.pracAppClientId : environment.pracAppClientId
       _resolve(environment);
     });
   }

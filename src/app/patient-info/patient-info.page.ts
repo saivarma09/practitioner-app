@@ -16,6 +16,7 @@ import { ClinicalNotesComponent } from './components/clinical-notes/clinical-not
 import { AllergiesComponent } from './components/allergies/allergies.component';
 import { ContactDetailsComponent } from './components/contact-details/contact-details.component';
 import { Clipboard } from '@angular/cdk/clipboard';
+import { HighlighterCircleComponent } from '../shared/components/highlighter-circle/highlighter-circle.component';
 
 @Component({
   selector: 'app-patient-info',
@@ -26,7 +27,7 @@ import { Clipboard } from '@angular/cdk/clipboard';
     IonContent, IonHeader, IonToolbar, CommonModule, FormsModule,
     HeaderComponent,
     IonList, IonItem, IonLabel, IonNote, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonText, IonSegment, IonSegmentButton,
-    IonFab, IonFabButton
+    IonFab, IonFabButton, HighlighterCircleComponent
   ]
 })
 export class PatientInfoPage implements OnInit {

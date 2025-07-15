@@ -4,6 +4,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-router-outlet></ion-router-outlet>
+<ion-content  class="ion-padding">
+  <div>
+    <div>Step {{stepCounter}} of 3</div>
+    <ion-progress-bar [value]=".25"></ion-progress-bar>
+  </div>
+  @switch (addStatus) {
+    @case ('details') {
+      <app-patient-details [patientForm]="patientForm.get('patientDetails')"></app-patient-details>
+    }
+    @case ('address') {
+      <app-address [addressForm]="patientForm.get('address')"></app-address>
+    }
+    @case ('review') {
+      <app-review></app-review>
+    }
+  }
+
 </ion-content>

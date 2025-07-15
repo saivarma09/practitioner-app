@@ -22,6 +22,8 @@ ion-segment-button {
   --background: transparent;
   --background-checked: transparent;
   --indicator-color: transparent;
+  --background-hover: transparent !important;
+  --background-focused: transparent !important;
   --padding-start: 0;
   --padding-end: 0;
   --indicator-box-shadow: none !important;
@@ -44,6 +46,7 @@ ion-segment-button {
   &:last-child{
     margin-right: 0px;
   }
+  
 }
 
 ion-segment-button.segment-button-checked {

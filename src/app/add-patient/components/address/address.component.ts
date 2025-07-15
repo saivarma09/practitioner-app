@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
@@ -14,7 +14,7 @@ import { AddPatientService } from '../../services/add-patient/add-patient.servic
   imports: [CommonModule, ReactiveFormsModule, MatSelectModule, IonGrid, IonRow, IonCol, IonContent, IonInput,  IonSelect, IonSelectOption, ButtonComponent]
 })
 export class AddressComponent implements OnInit {
-  addressForm: FormGroup;
+ @Input() addressForm!:FormGroup | any;
 
   typeOptions = [
     { label: 'Home', value: 'home' },
@@ -23,22 +23,8 @@ export class AddressComponent implements OnInit {
   ];
 
   constructor(private fb: FormBuilder, private router: Router, private addPatientService: AddPatientService ) {
-    this.addressForm = this.fb.group({
-      type: [''],
-      postalCode: [''],
-      prefix: [''],
-      initials: [''],
-      addressLine1: [''],
-      addressLine2: [''],
-      addressLine3: [''],
-      addressLine4: ['']
-    });
   }
 
   ngOnInit() {}
 
-  navigateToIdentifiers() {
-    this.addPatientService.setAddressDetails(this.addressForm.value);
-    this.router.navigate(['/add-patient/review']);
-  }
 }

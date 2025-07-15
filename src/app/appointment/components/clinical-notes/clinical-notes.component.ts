@@ -10,7 +10,7 @@ import { ClinicalNotesModelComponent } from '../clinical-notes-model/clinical-no
   templateUrl: './clinical-notes.component.html',
   styleUrls: ['./clinical-notes.component.scss'],
   standalone: true,
-  imports: [IonicModule,ButtonComponent, CommonModule]
+  imports: [IonicModule, ButtonComponent, CommonModule, ClinicalNotesModelComponent]
 })
 export class ClinicalNotesComponent {
   notes = [
@@ -18,16 +18,18 @@ export class ClinicalNotesComponent {
     { title: 'Diagnosis', date: '10/19/2023' },
     { title: 'Labs Ordered', date: '10/12/2023' }
   ];
-
+  modalStatus:boolean = false
   constructor(private modalCtrl: ModalController) {}
 
   async openAddNoteModal() {
-    const modal = await this.modalCtrl.create({
-      component: ClinicalNotesModelComponent,
-      initialBreakpoint: 0.7,
-      backdropDismiss: true
-    });
-    await modal.present();
+    // const modal = await this.modalCtrl.create({
+    //   component: ClinicalNotesModelComponent,
+    //   initialBreakpoint: 0.7,
+    //   breakpoints:[0.7, 0.9, 1],
+    //   backdropDismiss: true,
+    //   expandToScroll="false"
+    // });
+    // await modal.present();
   }
 }
  

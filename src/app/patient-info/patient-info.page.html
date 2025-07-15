@@ -5,18 +5,26 @@
 </ion-header>
 <ion-content [fullscreen]="true" class="ion-padding patient-info-content">
   <!-- Patient Avatar and Name -->
-  <div class="patient-avatar-container">
+  <div class="patient-avatar-container position-relative">
     <div class="position-relative">
     <img class="patient-avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Patient Avatar" />
     <span class="patient-status font-manrope  fw-600 success-color position-absolute icon-position">
     <img src="assets/icon/animated.gif" alt="check" class="check-icon" width="24" height="24">
-    
+
     </span>
   </div>
     <div class="patient-name-row">
       <span class="patient-name font-manrope fs-16 fw-600 primary-color">Olivia Bennett</span>
 
     </div>
+
+    <app-highlighter-circle requiredClass="green wh-100 patient-info-top-right-first"></app-highlighter-circle>
+    <app-highlighter-circle requiredClass="red wh-15 patient-info-top-right-second"></app-highlighter-circle>
+    <app-highlighter-circle requiredClass="blue wh-50 patient-info-top-right-third"></app-highlighter-circle>
+    <app-highlighter-circle requiredClass="red wh-50 patient-info-top-right-four"></app-highlighter-circle>
+    <app-highlighter-circle requiredClass="blue wh-15 patient-info-top-right-five"></app-highlighter-circle>
+    <app-highlighter-circle requiredClass="yellow wh-10 patient-info-top-right-six"></app-highlighter-circle>
+    <app-highlighter-circle requiredClass="yellow wh-50 patient-info-top-right-seven"></app-highlighter-circle>
   </div>
 
   <ion-card class="patient-info-card no-padding no-margin">

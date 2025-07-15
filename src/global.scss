@@ -87,6 +87,11 @@ body {
 }
 
 ion-modal::part(content) {
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+ion-modal ion-header{
   border-radius: 1rem;
 }
 

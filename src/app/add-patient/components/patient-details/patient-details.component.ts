@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
 import { ButtonComponent } from '../../../shared/components/button/button.component';
@@ -13,19 +13,10 @@ import { AddPatientService } from '../../services/add-patient/add-patient.servic
   imports: [CommonModule, ReactiveFormsModule, ButtonComponent, IonContent, IonInput, IonSelect, IonSelectOption, IonGrid, IonRow, IonCol]
 })
 export class PatientDetailsComponent implements OnInit {
-
-  patientForm: FormGroup;
+@Input() patientForm!:FormGroup | any
 
   constructor(private fb: FormBuilder, private router: Router, private addPatientService: AddPatientService) {
-    this.patientForm = this.fb.group({
-      title: [''],
-      firstName: [''],
-      lastName: [''],
-      initials: [''],
-      dob: [''],
-      gender: [''],
-      language: ['']
-    });
+
   }
 
   ngOnInit() {}
@@ -43,9 +34,4 @@ export class PatientDetailsComponent implements OnInit {
     { label: 'Other', value: 'other' }
   ];
 
-
-  navigateToAddressDetails() {
-    this.addPatientService.setPatientDetails(this.patientForm.value);
-    this.router.navigate(['/add-patient/address-details']);
-  }
 }

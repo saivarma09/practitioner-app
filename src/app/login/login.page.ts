@@ -18,17 +18,40 @@ export class LoginPage implements OnInit {
   }
 
   openExternalLogin() {
-    const url = 'https://auth.dev.healthcode.co.uk/login';
+    const url = 'https://auth.uat.healthcode.co.uk/login';
     const target = '_blank';
     const options = 'location=yes,clearcache=yes,clearsessioncache=yes,toolbar=yes';
 
-    const browser = cordova.InAppBrowser.open(url, target, options);
-
-    browser.addEventListener('loadstop', (event: any) => {
-      if (event.url && event.url.includes('callback')) {
-        // Handle token/callback here
-        browser.close();
+    if (window.hasOwnProperty('cordova') && cordova.InAppBrowser) {
+      // Cordova (mobile)
+      const browser = cordova.InAppBrowser.open(url, target, options);
+      browser.addEventListener('loadstop', (event: any) => {
+        if (event.url && event.url.includes('callback')) {
+          // Handle token/callback here
+          browser.close();
+        }
+      });
+    } else {
+      // Browser
+      const popup = window.open(url, '_blank');
+      if (!popup) {
+        alert('Popup blocked. Please allow popups for this site.');
+        return;
       }
-    });
+      const pollTimer = window.setInterval(() => {
+        try {
+          if (popup.location.href && popup.location.href.includes('callback')) {
+            // Handle token/callback here
+            popup.close();
+            window.clearInterval(pollTimer);
+          }
+        } catch (e) {
+          // Ignore cross-origin errors until redirected to our domain
+        }
+        if (popup.closed) {
+          window.clearInterval(pollTimer);
+        }
+      }, 500);
+    }
   }
 }
